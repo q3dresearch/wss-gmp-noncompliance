@@ -1,0 +1,32 @@
+# Data licence — read this before reusing anything in derived/
+
+**This repository does not and cannot license the data it captures.**
+
+## What the source says
+
+`eudragmdp.ema.europa.eu` serves a genuine **404 for robots.txt**, so no crawl
+rules are stated — that is an absence of rules, not a grant of rights, and the
+two must never be conflated.
+
+EMA's legal notice states that information on its website is *"subject to a
+disclaimer and copyright and limited reproduction notices."* The reproduction
+terms themselves were **not located** as of **22 September 2026**. So what EMA
+permits is unknown to this repository, and an unknown is not a licence.
+
+## What this repository grants
+
+| what | licence |
+| --- | --- |
+| the code — registry, parsers, workflows | MIT, see [LICENSE](LICENSE) |
+| `derived/`, `manifest/`, `raw/` | no onward licence offered; EMA's terms apply |
+
+The capture adds a retrieval timestamp and a parse. Neither creates a right over
+the underlying values.
+
+## If you are reusing this
+
+1. Attribute the **European Medicines Agency** as the source, not this repository.
+2. Establish EMA's reproduction terms yourself before redistributing.
+3. Treat this file as a record of what was checked on a date, not legal advice.
+
+Checked 22 September 2026.

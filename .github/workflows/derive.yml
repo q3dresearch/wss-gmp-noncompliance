@@ -1,0 +1,88 @@
+# Rebuilds derived/ from raw/ + manifest/.
+#   scheduled / manual  → rebuild and commit the new observations
+#   pull requests       → rebuild and FAIL unless byte-identical to what is
+#                         committed (catches hand-edited CSVs and
+#                         nondeterministic parsers; a parser PR must contain
+#                         its rebuilt output)
+#
+# Parsers are auto-discovered from parsers/*.py, so adding a schema needs no
+# workflow edit — same rule as adding a source.
+name: derive
+
+on:
+  schedule:
+    - cron: "20 0 * * 2" # Tuesday, after capture + health
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "parsers/**"
+      - "raw/**"
+      - "manifest/**"
+      - "derived/**"
+      - "registry/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fleet-commits
+  cancel-in-progress: false
+
+env:
+  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.53"
+
+jobs:
+  derive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install engine
+        run: pip install "$ENGINE_SPEC"
+      - name: Rebuild derived/ from the raw archive
+        env:
+          # Harmless when every source declares `storage: git` -- the variables
+          # are simply empty. REQUIRED the moment one declares `storage: object`,
+          # because object_config() then resolves to an entirely empty config and
+          # the job cannot write a byte. wss-drug-scarcity ran red for three days
+          # before anyone looked, so the wiring ships by default rather than
+          # being remembered at the point it is needed.
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          WSS_OBJECT_PREFIX: ${{ secrets.WSS_OBJECT_PREFIX }}
+        run: wss derive
+      - name: Byte-identical or red (pull requests)
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code -- derived
+      - name: Commit new observations (scheduled/manual)
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A derived
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "derive: run ${{ github.run_id }}"
+          for i in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            sleep $((i * 5))
+            # `git pull --rebase` leaves a CONFLICTED TREE when it fails, and
+            # the next push then fails for a different reason than the first.
+            # Abort so each attempt starts clean; `merge=union` in
+            # .gitattributes resolves the append-only manifest automatically,
+            # and anything it cannot resolve now fails loudly on attempt one
+            # instead of being disguised as five push failures.
+            if ! git pull --rebase; then
+              git rebase --abort || true
+              echo "rebase conflict on attempt $i -- not a push race" >&2
+            fi
+          done
+          echo "push failed after 5 attempts" >&2
+          exit 1

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it."
+type: dataset
+title: "EudraGMDP GMP Non-Compliance Statements (wss-gmp-noncompliance)"
+abstract: >-
+  Point-in-time captures of the EudraGMDP register of GMP non-compliance
+  statements: pharmaceutical manufacturing sites found non-compliant by EU
+  national inspectorates, with site, address, country, inspection end date and
+  issue date. The register carries eleven columns and no status field, so a
+  statement that is later resolved has nowhere to be marked resolved and must
+  either be edited in place or removed. Whichever happens, the register as it
+  stood on a given date is not recoverable from the publisher afterwards.
+authors:
+  - name: "q3dresearch"
+    website: "https://github.com/q3dresearch"
+# No `license:` field: EMA's reproduction terms could not be established
+# (checked 2026-09-22). An absent field means unspecified -- wss-engine
+# v0.6.53 no longer defaults it to CC-BY-4.0. CODE is MIT, see LICENSE.
+keywords:
+  - git-scraping
+  - open-data
+  - point-in-time-data
+  - dataset

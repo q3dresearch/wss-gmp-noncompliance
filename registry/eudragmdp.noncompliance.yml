@@ -1,0 +1,51 @@
+source_id: eudragmdp.noncompliance
+status: paused                   # see notes: the engine cannot drive this source yet
+cadence: monthly
+schema_id: gmpnc.v1
+
+publisher: European Medicines Agency
+publisher_tier: first_party
+# UNPROVEN, and deliberately flagged. The register carries ELEVEN columns and
+# not one of them is a status, so a resolved statement has nowhere to be marked
+# resolved -- it must either be edited in place or disappear. Which of those
+# happens needs a second capture to answer. The baseline exists (2026-09-22).
+destroys_own_history: true
+licence: "NOT ESTABLISHED (checked 2026-09-22). eudragmdp.ema.europa.eu serves a genuine 404 for robots.txt, so no crawl rules are stated. EMA's legal notice says the site is subject to 'a disclaimer and copyright and limited reproduction notices' but the reproduction terms themselves were not located. Do not assert a grant."
+personal_data: none              # manufacturing sites and companies, not individuals
+storage: git
+
+notes: >-
+  GMP non-compliance statements issued by EU national inspectorates: which
+  pharmaceutical manufacturing sites were found non-compliant, where, and when.
+  79 rows on 2026-09-22, up from 78 on 2026-09-15, so the register moves.
+
+  PAUSED BECAUSE THE ENGINE CANNOT EXPRESS THIS SOURCE. It is a Struts app
+  needing a four-step handshake: GET the form to obtain a session cookie AND an
+  action URL with an embedded jsessionid; POST the search to that action URL;
+  then walk pages with a session-stateful GET. Endpoint has url/method/body and
+  url_from, but url_from is a JSON-path extractor and nothing carries cookies
+  between fetches. Either the engine grows a session handshake, or this stays a
+  scripted capture outside it. The 2026-09-22 baseline was taken by hand and
+  lives in raw/.
+
+  UNIQUE KEY IS (Report Number, EudraGMDP Document Reference Number). Report
+  Number alone is NOT unique -- 79 rows carry 71 report numbers because one
+  report can name several sites. Diffing on it alone manufactures six permanent
+  phantom revisions.
+
+  THE DATE FILTER IS NOT UNDERSTOOD. fromDate=1990-01-01 with toDate=today
+  returns the whole register, but narrow ranges return 0. Do not use it to
+  partition captures until that is explained.
+
+endpoints:
+  - url: "https://eudragmdp.ema.europa.eu/inspections/gmpc/searchGMPNonCompliance.do"
+    delay_seconds: 6
+    timeout_seconds: 90
+
+gates:
+  expect_status: 200
+  min_bytes: 8000
+  content_type_any: [html]
+  must_contain: ["Report Number"]
+  must_not_contain: ["Access Denied", "Service Unavailable"]
+  max_shrink_pct: 40
