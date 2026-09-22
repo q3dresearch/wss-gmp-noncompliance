@@ -42,6 +42,11 @@ jobs:
           python-version: "3.12"
       - name: Install engine
         run: pip install "$ENGINE_SPEC"
+      - name: Install the .xls reader
+        # parsers/gmpnc_v1.py reads the EudraGMDP export, which is legacy BIFF
+        # (.xls) -- neither the stdlib nor openpyxl reads it. Without this the
+        # parser raises on import and derive produces nothing.
+        run: pip install xlrd
       - name: Rebuild derived/ from the raw archive
         env:
           # Harmless when every source declares `storage: git` -- the variables

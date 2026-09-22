@@ -52,6 +52,14 @@ notes: >-
   same page, which is exactly what happened eight times. The page count comes
   from the export's own record count, not a guess.
 
+  PARSED FROM THE EXPORT ONLY. parsers/gmpnc_v1.py reads the .xls and yields
+  nothing for the 8 HTML pages, because parsing both would double every
+  statement. `listed` is emitted once per statement per capture and its
+  ABSENCE in a later capture is the finding; `last_updated_at` is the
+  publisher's own edit stamp and is what makes an in-place edit visible. First
+  derive: 713 observations over 79 statements, all 79 keys matching the
+  hand-made baseline, last_updated_at spanning 2019-01-28 to 2026-09-21.
+
   UNIQUE KEY IS (Report Number, EudraGMDP Document Reference Number). Report
   Number alone is NOT unique -- 79 rows carry 71 report numbers because one
   report can name several sites. Diffing on it alone manufactures six permanent
