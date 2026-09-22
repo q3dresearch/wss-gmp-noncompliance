@@ -1,4 +1,4 @@
-source_id: eudragmdp.noncompliance
+source_id: eudragmdp.gmp.noncompliance
 status: paused                   # see notes: the engine cannot drive this source yet
 cadence: monthly
 schema_id: gmpnc.v1

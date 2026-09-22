@@ -4,7 +4,7 @@ Which pharmaceutical manufacturing sites EU national inspectorates found
 non-compliant with Good Manufacturing Practice, where, and when.
 
 **Status: paused, with one baseline capture taken by hand.** Read
-[registry/eudragmdp.noncompliance.yml](registry/eudragmdp.noncompliance.yml)
+[registry/eudragmdp.gmp.noncompliance.yml](registry/eudragmdp.gmp.noncompliance.yml)
 before doing anything.
 
 ## Why this exists
