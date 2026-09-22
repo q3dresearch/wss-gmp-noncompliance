@@ -1,0 +1,467 @@
+
+
+
+
+
+
+<html>
+  <head>
+    <META HTTP-EQUIV=Refresh CONTENT="1750; URL=/inspections/triggerSessionTimeOut.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064">
+    <base href="/inspections/;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064"/>
+    
+	<!-- painter 'global' -->
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/common.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/environment.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/utility.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/formatter.js'></script>
+	<!-- end -->
+
+	<!-- painter 'html' -->
+	<!-- end -->
+
+	<!-- painter 'def' -->
+	<link rel='stylesheet' href='fw/def/style/default.css' charset='ISO-8859-1' type='text/css'>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/functions.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/resourcemap.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/controls.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tabset.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tree.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/list.js'></script>
+	<!-- end -->
+
+	<title>
+	 	
+		
+			Eudra GMP - Public Layout
+		
+	</title>
+	<link rel="icon" href="/inspections/favicon.ico;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064" type="image/x-icon">
+	<script src="script/prototype.js" type="text/javascript"></script>
+	<script src="script/scriptaculous.js" type="text/javascript"></script>
+	<script src="script/registeredLayout_tile.js" type="text/javascript"></script>
+	<script language="javascript">
+ 		function onMenuClicked(targetUrl)
+		{
+			
+   			return true;
+		}
+ 		
+ 		function cookiesBannerShow() {
+ 			new Ajax.Request('/inspections/exc/cookies;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064', {
+		        method: 'GET',
+		        onComplete: function(response) {
+		            var json = response.responseText.evalJSON();
+		            if (json.showCookies == true) {
+		                $('cookie_window').show();
+		            }
+		        }
+		    });
+		}
+
+	    function acceptCookies() {
+            new Ajax.Request('/inspections/exc/cookies/accept;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064', {
+                method: 'POST',
+                onComplete: function(response) {
+                    window.location.reload();
+                }
+            });
+        }
+	    
+	    document.observe("dom:loaded", function() {
+		    cookiesBannerShow();
+		});
+	</script>
+ </head>
+ 
+  <body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0">
+
+    <table id="cookie_window" style="display: none">
+        <tbody>
+            <tr>
+                <td class="message">We use only First-Party essential cookies to make our website work and provide you with our services. No optional cookies are used. Learn more in our <a href="/inspections/exc/cookies/info;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064">Cookies Policy</a>.</td>
+                <td class="button_box"><button type="button" onclick="acceptCookies()">OK</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" class="fullHeight" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <!-- top eurologo -->
+        <td vAlign="top" height="20px" colspan="3">
+          <table cellpadding="0" cellspacing="0" width="100%" border="0">
+            <tr>
+              <td width="20px" valign="bottom" height="20px" bgcolor="#151E61">
+                <img src="image/common/eu_logo.jpg" border="0"/>
+              </td>
+              <td bgcolor="#151E61" valign="top" nowrap="nowrap"/>
+              <td bgcolor="#151E61" width="90%" class="class2">&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- top  margin -->
+      <tr vAlign="top">
+        <td vAlign="top" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td vAlign="top" height="20px">&nbsp;</td>
+        <td vAlign="top" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- top curve and logo  -->
+      <tr vAlign="top">
+        <td vAlign="top" width="40px" nowrap="nowrap">&nbsp;</td>
+        <td vAlign="top" height="1">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td vAlign="top" align="left" bgcolor="#080063">
+                
+
+  
+     <a href="displayHome.do"><img src="image/common/EudraGMP_small_logo.jpg" width="204" border="0" alt="EudraGMP Homepage"/></a>
+    
+
+              </td>
+              <td vAlign="top" width="100%" bgcolor="#080063">&nbsp;<font color="white" size="6">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td vAlign="top" align="right" bgcolor="#080063">
+                <img src="image/common/eu_b_r_corner_small.jpg" width="23"/>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td width="40px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- 5px while line -->
+      <tr>
+        <td width="40px" height="5px" nowrap="nowrap"/>
+        <td height="5px"/>
+        <td width="40px" height="5px" nowrap="nowrap"/>
+      </tr>
+      <tr>
+        <td width="40px" nowrap="nowrap">&nbsp;</td>
+        <td valign="top" class="border_l_n_r">
+          <!-- Horizontal Menu -->
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr height="24px" bgcolor="#8C88B6" class="gmpHeader">
+              <td height="5px" nowrap="nowrap" width="15px"/>
+              <td align="left" valign="middle" nowrap="nowrap" class="class1">
+                
+
+
+
+
+
+
+
+
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+<SCRIPT LANGUAGE="JavaScript">
+	
+	function confirmLogout(target)
+	{
+			if(window.confirm(document.forms[0].logoutConfirmMessage.value)) {
+				
+						document.forms[0].submit();
+				
+			}
+	}
+	
+	</SCRIPT>
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <td nowrap="nowrap">
+     
+        <a href="mia/index.do">MIA</a>
+      
+    
+      <FONT color="#ffffff">|</FONT> 
+
+      
+        <a href="gmpc/index.do">GMP</a>
+      
+      
+      <FONT color="#ffffff">|</FONT> 
+
+      
+        <a href="view/apiReg/APIRegistrationHome.xhtml">API REG</a>
+      
+      
+      <FONT color="#ffffff">|</FONT> 
+
+      
+        <a href="view/wda/WDAHomePage.xhtml">WDA</a>
+      
+      
+      <FONT color="#ffffff">|</FONT> 
+      
+       
+        <a href="view/common/GDPHomePage.xhtml">GDP</a>
+      
+
+      <FONT color="#ffffff">|</FONT> 
+
+    <a href="/inspections/exc/sites;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064">Sites</a>
+
+
+	
+	</td>
+	 
+ <td align="right"> 
+	
+	
+      <a href="https://eudragmdp.ema.europa.eu/help_public/Default.htm" target="_blank">Help</a>
+    </td>
+   	
+	
+	  </tr>
+</table>
+
+              </td>
+              <td align="right" height="1px">
+                
+              </td>
+            </tr>
+            <tr height="1px" bgcolor="#ffffff">
+              <td colspan="3" height="1px"/>
+            </tr>
+            <tr bgcolor="#EFEFEF">
+              <td colspan="3" align="right" >
+                
+                
+
+<!--%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %-->
+
+<span align="left">
+<font size="2" ><i>
+
+
+Sat 18 Oct 2025 16:45:19 BST
+
+</i>
+</font>
+</span>
+              </td>
+            </tr>
+          </table>
+          <!-- Vertical Menu -->
+          <table width="100%" border="0" cellspacing="0" cellpadding="10">
+            <tr>
+              <td width="41" valign="top">
+                
+
+
+
+
+
+
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+
+
+
+<!-- BEGIN: com.cc.framework.ui.painter.def.DefFormDisplayPainter [null] -->
+
+  
+ 
+  
+<span><input name='formid' type='hidden' value='gmpcMenu'><table cellspacing='0' width='100%' class='fc' border='0' cellpadding='0'><thead><tr><td><table cellspacing='0' class='fch' border='0' cellpadding='0'><tr><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/l.gif'></td><td width='100%'><table cellpadding='0' width='100%' cellspacing='3'><tr><td nowrap class='c'>GMP Compliance Menu</td><td width='100%'>&#160;</td></tr></table></td><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/r.gif'></td></tr></table></td></tr></thead><tbody><tr><td><table cellspacing='0' width='100%' class='fcb' cellpadding='0'><tr><td><table cellspacing='0' width='100%' class='ibody' cellpadding='0'><tr rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='2' class='fd'><table width="200">
+       
+    </table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr><td colspan='4' class='section'>Search</td></tr><tr rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='2' class='fd'><table width="200">
+	    
+        <tr>
+          <td>
+             
+               <a href="gmpc/searchGMPCompliance.do">GMP Certificates</a>
+			  
+          </td>
+        </tr>
+	
+        <tr>
+          <td>
+		      
+                     <a href="gmpc/searchGMPNonCompliance.do">Non-Compliance Report</a>
+			  
+          </td>
+        </tr>
+         
+    </table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr></table></td></tr></table></td></tr></tbody></table></span><!-- END: com.cc.framework.ui.painter.def.DefFormDisplayPainter -->
+
+              </td>
+              <td valign="top" id="content">
+                
+
+
+
+
+
+
+<!-- %@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %-->
+
+
+<!--link rel='stylesheet' href="../fw/def/style/default.css" type='text/css'-->
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+
+
+	<!-- painter 'global' -->
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/common.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/environment.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/utility.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/formatter.js'></script>
+	<!-- end -->
+
+	<!-- painter 'html' -->
+	<!-- end -->
+
+	<!-- painter 'def' -->
+	<link rel='stylesheet' href='fw/def/style/default.css' charset='ISO-8859-1' type='text/css'>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/functions.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/resourcemap.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/controls.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tabset.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tree.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/list.js'></script>
+	<!-- end -->
+
+
+<form name="GMPNCSearchForm" method="post" action="/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064">  
+
+      
+<!-- BEGIN: com.cc.framework.ui.painter.def.DefFormEditPainter [null] -->
+
+	         
+		        
+         
+         
+      
+		 
+			 
+			 
+         
+        
+        
+
+	<span><input name='formid' type='hidden' value='frmGMPCSearch'><table cellspacing='0' width='100%' class='fc' border='0' cellpadding='0'><thead><tr><td><table cellspacing='0' class='fch' border='0' cellpadding='0'><tr><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/l.gif'></td><td width='100%'><table cellpadding='0' width='100%' cellspacing='3'><tr><td nowrap class='c'>Non Compliance Reports</td><td width='100%'>&#160;</td></tr></table></td><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/r.gif'></td></tr></table></td></tr></thead><tbody><tr><td><table cellspacing='0' width='100%' class='fcb' cellpadding='0'><tr><td><table cellspacing='0' width='100%' class='ibody' cellpadding='0'><tr id='tr_fromDate' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td valign='center' class='fl'><label>From Issue Date:</label></td><td valign='center' nowrap class='fd'><table cellpadding='0' cellspacing='0' border='0'><tr valign='middle'><td align='middle'><input size='8' id='ctrl84918116' value='2025-07-18' name='fromDate' maxlength='10' type='text'></td><td style='padding-left:5px;' align='middle'><a href="javascript:popupCalendar('ctrl84918116','EN_UK','YYYY-MM-DD',380,240,'/inspections/fw/html/calendar/layout1/calendar.jsp');"><img width='16' height='15' border='0' src='fw/html/image/imgCalendar1.gif'></a></td><td style='padding-left:5px;font-size:8pt;' align='middle'>(YYYY-MM-DD)</td><td valign='top' rowspan='1'><img width='9' title='required input element' style='margin-left:3px;' src='fw/def/image/required.gif' height='13' border='0' align='absmiddle' vspace='0'></td></tr></table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='3' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_toDate' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td valign='center' class='fl'><label>To Issue Date:</label></td><td valign='center' nowrap class='fd'><table cellpadding='0' cellspacing='0' border='0'><tr valign='middle'><td align='middle'><input size='8' id='ctrl1488094395' value='2025-10-18' name='toDate' maxlength='10' type='text'></td><td style='padding-left:5px;' align='middle'><a href="javascript:popupCalendar('ctrl1488094395','EN_UK','YYYY-MM-DD',380,240,'/inspections/fw/html/calendar/layout1/calendar.jsp');"><img width='16' height='15' border='0' src='fw/html/image/imgCalendar1.gif'></a></td><td style='padding-left:5px;font-size:8pt;' align='middle'>(YYYY-MM-DD)</td><td valign='top' rowspan='1'><img width='9' title='required input element' style='margin-left:3px;' src='fw/def/image/required.gif' height='13' border='0' align='absmiddle' vspace='0'></td></tr></table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='buttons'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>&#160;</label></td><td class='fd'><table cellspacing='0' width='100%' class='fb' border='0' cellpadding='5'><tr><td width='100%'>&#160;</td><td align='right'><div id='btnSearchGMPNC' onClick="document.getElementById('btnSearchGMPNCHidden').value='clicked'; CCUtility.submitEnclosingForm(this);"><input id='btnSearchGMPNCHidden' name='btnSearchGMPNC' type='HIDDEN'><table cellspacing='0' class='tbtn' border='0' cellpadding='0'><tr valign='middle'><td><img id='btnBgL' width='16' height='17' border='0' src='fw/def/image/buttons/btnTxtBgL1.gif'></td><td id='btnMiddle' align='middle' background='fw/def/image/buttons/btnTxtBgM1.gif' style='background-position: right;' nowrap><span id='btnSearchGMPNCLabel' style='color:#000000' class='tbtn'>Search</span></td><td><img id='btnBgR' width='8' height='17' border='0' src='fw/def/image/buttons/btnTxtBgR1.gif'></td></tr></table></div></td></tr></table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr></table></td></tr></table></td></tr></tbody></table></span><!-- END: com.cc.framework.ui.painter.def.DefFormEditPainter -->
+   
+  
+    <br>
+    
+<!-- BEGIN: com.cc.framework.ui.painter.def.DefListPainter [searchGMPNCResultControlList] -->
+
+		  
+          
+		  
+		  
+		  
+		  
+		  
+          
+		  
+		  
+          
+		  
+          
+		  
+		 
+		 
+		 
+		 
+		 
+    <span id='lc_ctrl638977265'><table id='ctrl638977265' cellspacing='0' width='100%' class='lc' border='0' cellpadding='0'><thead><tr><td><table cellspacing='0' class='lch' border='0' cellpadding='0'><tr><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/l.gif'></td><td width='100%'><table cellpadding='0' width='100%' cellspacing='3'><tr><td nowrap class='c'>GMP Non-Compliance Search Results</td><td><img width='6' height='15' border='0' src='fw/def/image/bullet.gif'></td><td nowrap class='d'>6 items</td><td width='100%'>&#160;</td><td><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=ExportList' title='Export list as Excel'><img width='15' src='fw/def/image/buttons/btnExport1.gif' height='15' border='0' align='absmiddle' id='btn' vspace='0'></a></td></tr></table></td><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/r.gif'></td></tr></table></td></tr></thead><tbody><tr><td><table cellspacing='0' width='100%' class='lcb' cellpadding='0'><tr><td><table cellspacing='1' width='100%' class='ibody' border='0' cellpadding='0'><tr class='header'><td width='11%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Sort&param=certificateNumber&param=asc'>Report Number<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'>EudraGMDP Document Reference Number</td><td width='9%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Sort&param=miaAuthNum&param=asc'>MIA Number<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='12%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Sort&param=siteNameHtmlView&param=asc'>Site Name<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='25%'>Site Address</td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Sort&param=omsLocationId&param=asc'>OMS Location Identifier<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Sort&param=siteCity&param=asc'>City<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Sort&param=sitePostCode&param=asc'>Postcode<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'>Country</td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Sort&param=inspectionDate&param=asc'>Inspection End Date<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortDown1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='12%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Sort&param=issueDate&param=asc'>Issue Date<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Drilldown&param=179579'><span>DE_BE_01_NC_2025/01</span></a></td><td class='cl'><div>179579</div></td><td class='cl'><div style='font-size:12'>&#160;</div></td><td class='cl'><div><div>Mera Cannabis Corp. </div></div></td><td class='cl'><div><div>27 Sparling Road </div></div></td><td class='cl'><div style='font-size:12'>LOC-100087634</div></td><td class='cl'><div>St Thomas</div></td><td class='cl'><div>N5P 4A4</div></td><td class='cl'><div>Canada</div></td><td class='cl'><div>2025-07-30</div></td><td class='cl'><div style='font-size:12'>2025-09-11</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Drilldown&param=179568'><span>MT/003NCR/2025</span></a></td><td class='cl'><div>179568</div></td><td class='cl'><div style='font-size:12'>&#160;</div></td><td class='cl'><div><div>Ilko Ilac Sanayi Ve Ticaret A.S. </div></div></td><td class='cl'><div><div>3 Osb Buyuk Kayacik Mah, Kuddusi Caddesi No 1 23 Sok </div></div></td><td class='cl'><div style='font-size:12'>LOC-100062012</div></td><td class='cl'><div>Selcuklu</div></td><td class='cl'><div>42250</div></td><td class='cl'><div>T&uuml;rkiye</div></td><td class='cl'><div>2025-07-29</div></td><td class='cl'><div style='font-size:12'>2025-09-10</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Drilldown&param=180165'><span>NL/H 25/2057693</span></a></td><td class='cl'><div>180165</div></td><td class='cl'><div style='font-size:12'>&#160;</div></td><td class='cl'><div><div>Indeus Life Sciences Private Limited </div></div></td><td class='cl'><div><div>Bal Rajeshwar Road, Mulund West </div></div></td><td class='cl'><div style='font-size:12'>LOC-100030258</div></td><td class='cl'><div>Mumbai</div></td><td class='cl'><div>400080</div></td><td class='cl'><div>India</div></td><td class='cl'><div>2025-06-05</div></td><td class='cl'><div style='font-size:12'>2025-10-14</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Drilldown&param=179789'><span>NL/V 25/V2057208</span></a></td><td class='cl'><div>179789</div></td><td class='cl'><div style='font-size:12'>2132-F</div></td><td class='cl'><div><div>Veyx-Pharma B.V. </div></div></td><td class='cl'><div><div>Forellenweg 16 </div></div></td><td class='cl'><div style='font-size:12'>LOC-100021420</div></td><td class='cl'><div>Raamsdonksveer</div></td><td class='cl'><div>4941 SJ</div></td><td class='cl'><div>Netherlands</div></td><td class='cl'><div>2025-05-22</div></td><td class='cl'><div style='font-size:12'>2025-09-25</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Drilldown&param=179790'><span>NL/V/25/V2057208</span></a></td><td class='cl'><div>179790</div></td><td class='cl'><div style='font-size:12'>2639 - F</div></td><td class='cl'><div><div>Produlab Pharma Production B.V. </div></div></td><td class='cl'><div><div>Forellenweg 16 </div></div></td><td class='cl'><div style='font-size:12'>LOC-100025168</div></td><td class='cl'><div>Raamsdonksveer</div></td><td class='cl'><div>4941 SJ</div></td><td class='cl'><div>Netherlands</div></td><td class='cl'><div>2025-05-22</div></td><td class='cl'><div style='font-size:12'>2025-09-25</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=8Sn3yDxG9Ji9qo75k1QOdoWt1afb5FO-qW8jADkbB6HSmnH7stbd!-1751146064?ctrl=searchGMPNCResultControlList&action=Drilldown&param=179791'><span>NL/V/25/V2057208</span></a></td><td class='cl'><div>179791</div></td><td class='cl'><div style='font-size:12'>1401-F</div></td><td class='cl'><div><div>Produlab Pharma B.V. </div></div></td><td class='cl'><div><div>Forellenweg 16 </div></div></td><td class='cl'><div style='font-size:12'>LOC-100021922</div></td><td class='cl'><div>Raamsdonksveer</div></td><td class='cl'><div>4941 SJ</div></td><td class='cl'><div>Netherlands</div></td><td class='cl'><div>2025-05-22</div></td><td class='cl'><div style='font-size:12'>2025-09-25</div></td></tr></table></td></tr></table></td></tr></tbody></table><script type='text/javascript' language='JavaScript'>
+<!--
+var lc_ctrl638977265 = new ListControl('ctrl638977265');
+// -->
+</script></span><!-- END: com.cc.framework.ui.painter.def.DefListPainter -->
+
+  
+</form>
+</body>
+</html>
+                
+              </td>
+              <td width="40">&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+        <td width="40px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- 5px while line -->
+      <tr class="border_l_n_r">
+        <td width="40px" height="5px" nowrap="nowrap"/>
+        <td height="5px" class="border_l_n_r">&nbsp;</td>
+        <td width="40px" height="5px" nowrap="nowrap" class="border_l_n_r"/>
+      </tr>
+      <!-- Content  -->
+      <tr>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td height="20px" class="border_l_n_r">&nbsp;</td>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- bottom curves  -->
+      <tr>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="left">
+                <img src="image/common/ep_b_l_corner2.jpg" width="22" align="absbottom"/>
+              </td>
+              <td width="100%" align="center" class="border_bottom">&nbsp;</td>
+              <td align="right">
+                <img src="image/common/EP_b_r_corner2.jpg" width="23" align="absbottom"/>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- trade mark  -->
+      <tr valign="bottom">
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td valign="bottom" height="20px" align="center">
+          <table>
+            <tr vAlign="bottom">
+              <td vAlign="bottom">
+                
+
+<table>
+	<tr vAlign=bottom>
+		<td vAlign=bottom><font size="1" face="arial" color="#333333"><script>
+function openInNewWindowCA()
+ {
+	   window.open('viewCompetentAuthorityAddresses.do','print','scrollbars=yes,status=no,titlebar=no,resizable=yes,menubar=no');
+	   }
+</script>
+The EudraGMDP database is maintained and operated by the EMA. Access to the general public is granted in order to enhance availability of information related to the EMA mandate.  The content of the database is provided by the National Competent Authorities (NCA) of the EEA. For this reason, the EMA accepts no responsibility or liability whatsoever (including but not limited to any direct or consequential loss or damage it might occur to you and/or any other third party) arising out of or in connection with the information on this database.  Any questions about the content should be addressed to the relevant NCA. Please <a href="javascript:openInNewWindowCA()" style="text-decoration: underline;padding-left:0px;padding-right:0px">click here</a> to get list of NCA's.
+</font></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: bottom; font-family: Arial,sans-serif; font-size: x-small; color: #333333; padding-bottom: 0.4rem; font-weight: bolder;">
+			<p>For the UK, as from 1.1.2021, EU Law applies only to the territory of Northern Ireland (NI) to the extent foreseen in the Protocol on Ireland/NI.</p>
+<p>Documents issued by UK authorities up to and including 31 December 2020 remain available for consultation in EudraGMDP. However, they are no longer included or updated from 1 January 2021, with the exception of the documents pertaining to sites located in Northern Ireland.</p>
+		</td>
+	</tr>
+	<tr vAlign=bottom>
+		<td vAlign=bottom align="center"><font size="1" face="arial" color="#333333">[EMA &copy; 2014. EudraGMDP <!DOCTYPE html>
+6.5.4.3 build 2025/10/08 06:11] </td>
+	</tr>
+</table>                
+              </td>
+              <td vAlign="bottom"> 
+               <iframe name="beansAlive" src="keepBeansAlive.do" width="0" height="0" frameborder="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- bottom margin -->
+      <tr vAlign="bottom">
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td valign="bottom" height="20px">&nbsp;</td>
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+

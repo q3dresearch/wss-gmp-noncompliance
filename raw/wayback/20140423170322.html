@@ -1,0 +1,469 @@
+<META HTTP-EQUIV=Refresh CONTENT="1750; URL=http://eudragmdp.ema.europa.eu:80/inspections/triggerSessionTimeOut.do ">  
+
+
+
+
+
+<!--%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %-->
+
+
+
+<html>
+  <head>
+    <base href="http://eudragmdp.ema.europa.eu:80/inspections/">
+    
+	<!-- painter 'global' -->
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/common.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/environment.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/utility.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/formatter.js'></script>
+	<!-- end -->
+
+	<!-- painter 'html' -->
+	<!-- end -->
+
+	<!-- painter 'def' -->
+	<link rel='stylesheet' href='fw/def/style/default.css' charset='ISO-8859-1' type='text/css'>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/functions.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/resourcemap.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/controls.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tabset.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tree.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/list.js'></script>
+	<!-- end -->
+
+	<title>
+	 	
+		
+			Eudra GMP - Public Layout
+		
+	</title>
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+<!-- script src="http://www.google-analytics.com/urchin.js" type="text/javascript"-->
+</script>
+<!--script type="text/javascript">
+_uacct = "UA-1021910-2"; // UA-1021910-2 is the code for eudragmp-test.eudra.org 
+// UA-1021910-1 is the code for eudragmp-test.emea.eu.int
+urchinTracker();
+</script-->
+	<script language="javascript">
+
+   
+function isEnterPressed() 
+{
+
+		if(window.event && window.event.keyCode == 13)
+   		     return false;
+}
+
+function checkDate(dateText)
+	  {
+			var v=dateText.value;
+			if(v.length!=10) dateText.value="";
+			else
+			  {
+				var index1=Number(v.indexOf("-"));
+				if(index1!=4)
+					dateText.value="";
+				else
+				{
+					  var index2=Number(v.indexOf("-",4+1));
+					  if(index2!=7)
+						  dateText.value="";
+					  else
+					  {
+						  var year = v.substring(0,4);
+						  var month = v.substring(5,7) ;
+						  var date=v.substring(8,10);
+						  if(!isValidDate(year,month,date))
+							dateText.value="";
+						   
+					  }
+
+				}
+		     }
+	  }
+function isValidDate(year,month,date){
+	   var monarr = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+		// check for leap year
+		if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) monarr[1] = "29";
+		if(parseInt(date,10) > monarr[parseInt(month,10)-1])
+			return false;
+		return true;
+	  
+
+ }
+</script>
+  </head>
+  <body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0">
+    <table border="0" class="fullHeight" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <!-- top eurologo -->
+        <td vAlign="top" height="20px" colspan="3">
+          <table cellpadding="0" cellspacing="0" width="100%" border="0">
+            <tr>
+              <td width="20px" valign="bottom" height="20px" bgcolor="#151E61">
+                <img src="image/common/eu_logo.jpg" border="0"/>
+              </td>
+              <td bgcolor="#151E61" valign="top" nowrap="nowrap"/>
+              <td bgcolor="#151E61" width="90%" class="class2">&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- top  margin -->
+      <tr vAlign="top">
+        <td vAlign="top" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td vAlign="top" height="20px">&nbsp;</td>
+        <td vAlign="top" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- top curve and logo  -->
+      <tr vAlign="top">
+        <td vAlign="top" width="40px" nowrap="nowrap">&nbsp;</td>
+        <td vAlign="top" height="1">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td vAlign="top" align="left" bgcolor="#080063">
+                
+
+  
+     <a href="displayHome.do"><img src="image/common/EudraGMP_small_logo.jpg" width="204" border="0" alt="EudraGMP Homepage"/></a>
+    
+
+              </td>
+              <td vAlign="top" width="100%" bgcolor="#080063">&nbsp;<font color="white" size="6">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td vAlign="top" align="right" bgcolor="#080063">
+                <img src="image/common/eu_b_r_corner_small.jpg" width="23"/>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td width="40px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- 5px while line -->
+      <tr>
+        <td width="40px" height="5px" nowrap="nowrap"/>
+        <td height="5px"/>
+        <td width="40px" height="5px" nowrap="nowrap"/>
+      </tr>
+      <tr>
+        <td width="40px" nowrap="nowrap">&nbsp;</td>
+        <td valign="top" class="border_l_n_r">
+          <!-- Horizontal Menu -->
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr height="24px" bgcolor="#8C88B6" class="gmpHeader">
+              <td height="5px" nowrap="nowrap" width="15px"/>
+              <td align="left" valign="middle" nowrap="nowrap" class="class1">
+                
+
+
+
+
+
+
+
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	function confirmLogout(target)
+	{
+			if(window.confirm(document.forms[0].logoutConfirmMessage.value)) {
+				
+						document.forms[0].submit();
+				
+			}
+	}
+	//-->
+	</SCRIPT>
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <td nowrap="nowrap">
+     
+        <a href="mia/index.do">MIA</a>
+      
+    
+      <FONT color="#ffffff">|</FONT> 
+
+      
+        <a href="gmpc/index.do">GMP</a>
+      
+      
+      <FONT color="#ffffff">|</FONT> 
+
+      
+        <a href="view/apiReg/APIRegistrationHome.xhtml">API REG</a>
+      
+      
+      <FONT color="#ffffff">|</FONT> 
+
+      
+        <a href="view/wda/WDAHomePage.xhtml">WDA</a>
+      
+      
+      <FONT color="#ffffff">|</FONT> 
+      
+       
+        <a href="view/common/GDPHomePage.xhtml">GDP</a>
+      
+
+      <FONT color="#ffffff">|</FONT> 
+    
+    
+            <a href="common/searchSites.do">Sites</a>
+     
+
+
+	
+	</td>
+	 
+ <td align="right"> 
+	
+	
+      <a href="http://eudragmp.ema.europa.eu/help_public/Default.htm" target="_blank">Help</a>
+    </td>
+   	
+	
+	  </tr>
+</table>
+
+              </td>
+              <td align="right" height="1px">
+                
+              </td>
+            </tr>
+            <tr height="1px" bgcolor="#ffffff">
+              <td colspan="3" height="1px"/>
+            </tr>
+            <tr bgcolor="#EFEFEF">
+              <td colspan="3" align="right" >
+                
+                
+
+<!--%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %-->
+
+<span align="left">
+<font size="2" ><i>
+
+
+Wed 23 Apr 2014 18:03:22 BST
+
+</i>
+</font>
+</span>
+              </td>
+            </tr>
+          </table>
+          <!-- Vertical Menu -->
+          <table width="100%" border="0" cellspacing="0" cellpadding="10">
+            <tr>
+              <td width="41" valign="top">
+                
+
+
+
+
+
+
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+
+
+
+<!-- BEGIN: com.cc.framework.ui.painter.def.DefFormDisplayPainter [null] -->
+
+
+ 
+  
+<span><input name='formid' type='hidden' value='gmpcMenu'><table cellspacing='0' width='100%' class='fc' border='0' cellpadding='0'><thead><tr><td><table cellspacing='0' class='fch' border='0' cellpadding='0'><tr><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/l.gif'></td><td width='100%'><table cellpadding='0' width='100%' cellspacing='3'><tr><td nowrap class='c'>GMP Compliance Menu</td><td width='100%'>&#160;</td></tr></table></td><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/r.gif'></td></tr></table></td></tr></thead><tbody><tr><td><table cellspacing='0' width='100%' class='fcb' cellpadding='0'><tr><td><table cellspacing='0' width='100%' class='ibody' cellpadding='0'><tr><td colspan='4' class='section'>Search</td></tr><tr rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='2' class='fd'><table width="200">
+	    
+        <tr>
+          <td>
+             
+               <a href="gmpc/searchGMPCompliance.do">GMP Certificates</a>
+			  
+          </td>
+        </tr>
+	
+        <tr>
+          <td>
+		      
+                     <a href="gmpc/searchGMPNonCompliance.do">Non-Compliance Report</a>
+			  
+          </td>
+        </tr>
+         
+    </table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr></table></td></tr></table></td></tr></tbody></table></span><!-- END: com.cc.framework.ui.painter.def.DefFormDisplayPainter -->
+
+              </td>
+              <td valign="top">
+                
+
+
+
+
+
+
+<!-- %@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %-->
+
+
+<link rel='stylesheet' href="../fw/def/style/default.css" type='text/css'>
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+
+
+	<!-- painter 'global' -->
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/common.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/environment.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/utility.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/formatter.js'></script>
+	<!-- end -->
+
+	<!-- painter 'html' -->
+	<!-- end -->
+
+	<!-- painter 'def' -->
+	<link rel='stylesheet' href='fw/def/style/default.css' charset='ISO-8859-1' type='text/css'>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/functions.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/resourcemap.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/controls.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tabset.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tree.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/list.js'></script>
+	<!-- end -->
+
+
+<form name="GMPNCSearchForm" method="post" action="/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945">  
+
+      
+<!-- BEGIN: com.cc.framework.ui.painter.def.DefFormEditPainter [null] -->
+
+	         
+		        
+         
+         
+      
+		 
+			 
+			 
+         
+        
+        
+
+	<span><input name='formid' type='hidden' value='frmGMPCSearch'><table cellspacing='0' width='100%' class='fc' border='0' cellpadding='0'><thead><tr><td><table cellspacing='0' class='fch' border='0' cellpadding='0'><tr><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/l.gif'></td><td width='100%'><table cellpadding='0' width='100%' cellspacing='3'><tr><td nowrap class='c'>Non Compliance Reports</td><td width='100%'>&#160;</td></tr></table></td><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/r.gif'></td></tr></table></td></tr></thead><tbody><tr><td><table cellspacing='0' width='100%' class='fcb' cellpadding='0'><tr><td><table cellspacing='0' width='100%' class='ibody' cellpadding='0'><tr id='tr_fromDate' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td valign='center' class='fl'><label>From Date:</label></td><td valign='center' nowrap class='fd'><table cellpadding='0' cellspacing='0' border='0'><tr valign='middle'><td align='middle'><input size='8' id='ctrl241788461' value='2014-01-23' name='fromDate' maxlength='10' type='text'></td><td style='padding-left:5px;' align='middle'><a href="javascript:popupCalendar('ctrl241788461','EN_UK','YYYY-MM-DD',380,240,'/inspections/fw/html/calendar/layout1/calendar.jsp');"><img width='16' height='15' border='0' src='fw/html/image/imgCalendar1.gif'></a></td><td style='padding-left:5px;font-size:8pt;' align='middle'>(YYYY-MM-DD)</td><td valign='top' rowspan='1'><img width='9' title='required input element' style='margin-left:3px;' src='fw/def/image/required.gif' height='13' border='0' align='absmiddle' vspace='0'></td></tr></table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='3' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_toDate' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td valign='center' class='fl'><label>To Date:</label></td><td valign='center' nowrap class='fd'><table cellpadding='0' cellspacing='0' border='0'><tr valign='middle'><td align='middle'><input size='8' id='ctrl406242307' value='2014-04-23' name='toDate' maxlength='10' type='text'></td><td style='padding-left:5px;' align='middle'><a href="javascript:popupCalendar('ctrl406242307','EN_UK','YYYY-MM-DD',380,240,'/inspections/fw/html/calendar/layout1/calendar.jsp');"><img width='16' height='15' border='0' src='fw/html/image/imgCalendar1.gif'></a></td><td style='padding-left:5px;font-size:8pt;' align='middle'>(YYYY-MM-DD)</td><td valign='top' rowspan='1'><img width='9' title='required input element' style='margin-left:3px;' src='fw/def/image/required.gif' height='13' border='0' align='absmiddle' vspace='0'></td></tr></table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='buttons'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>&#160;</label></td><td class='fd'><table cellspacing='0' width='100%' class='fb' border='0' cellpadding='5'><tr><td width='100%'>&#160;</td><td align='right'><div id='btnSearchGMPNC' onClick="document.getElementById('btnSearchGMPNCHidden').value='clicked'; CCUtility.submitEnclosingForm(this);"><input id='btnSearchGMPNCHidden' name='btnSearchGMPNC' type='HIDDEN'><table cellspacing='0' class='tbtn' border='0' cellpadding='0'><tr valign='middle'><td><img id='btnBgL' width='16' height='17' border='0' src='fw/def/image/buttons/btnTxtBgL1.gif'></td><td id='btnMiddle' align='middle' background='fw/def/image/buttons/btnTxtBgM1.gif' style='background-position: right;' nowrap><span id='btnSearchGMPNCLabel' style='color:#000000' class='tbtn'>Search</span></td><td><img id='btnBgR' width='8' height='17' border='0' src='fw/def/image/buttons/btnTxtBgR1.gif'></td></tr></table></div></td></tr></table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr></table></td></tr></table></td></tr></tbody></table></span><!-- END: com.cc.framework.ui.painter.def.DefFormEditPainter -->
+   
+  
+    <br>
+    
+<!-- BEGIN: com.cc.framework.ui.painter.def.DefListPainter [searchGMPNCResultControlList] -->
+
+          
+          
+          
+          
+          
+          
+		  
+          
+          
+          
+          
+          
+          
+    <span id='lc_ctrl1577191247'><table id='ctrl1577191247' cellspacing='0' width='100%' class='lc' border='0' cellpadding='0'><thead><tr><td><table cellspacing='0' class='lch' border='0' cellpadding='0'><tr><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/l.gif'></td><td width='100%'><table cellpadding='0' width='100%' cellspacing='3'><tr><td nowrap class='c'>GMP Non-Compliance Search Results</td><td><img width='6' height='15' border='0' src='fw/def/image/bullet.gif'></td><td nowrap class='d'>1 to 10 of 13</td><td width='100%'>&#160;</td><td><img width='15' height='15' border='0' src='fw/def/image/buttons/btnFirst2.gif'></td><td><img width='15' height='15' border='0' src='fw/def/image/buttons/btnPrev2.gif'></td><td><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Page&param=1' title='Goto next page'><img width='15' src='fw/def/image/buttons/btnNext1.gif' height='15' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Page&param=-1' title='Goto last page'><img width='15' src='fw/def/image/buttons/btnLast1.gif' height='15' border='0' align='absmiddle' id='btn' vspace='0'></a></td></tr></table></td><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/r.gif'></td></tr></table></td></tr></thead><tbody><tr><td><table cellspacing='0' width='100%' class='lcb' cellpadding='0'><tr><td><table cellspacing='1' width='100%' class='ibody' border='0' cellpadding='0'><tr class='header'><td width='11%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=certificateNumber&param=asc'>Report Number<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='12%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=siteName&param=asc'>Site Name<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=siteCity&param=asc'>City<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=siteCountry&param=asc'>Country<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=sitePostCode&param=asc'>Postcode<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=dunsNumber&param=asc'>DUNS Number<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=siteEudraGMPRefKey&param=asc'>EudraGMDP Key<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='8%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=siteNCARefKey&param=asc'>NCA Ref<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='9%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=miaAuthNum&param=asc'>MIA Number<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=issueDate&param=asc'>Issue Date<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=status&param=asc'>Status<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='12%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=modifiedUserIdWithShortNCAName&param=asc'>Last Update By<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='15%'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Sort&param=modifiedDate&param=asc'>Last Update Date<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortDown1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=23316'><span>UK API 8913 Insp GMP 8913/18322-0006 - NCR</span></a></td><td class='cl'><div>WOCKHARDT LIMITED</div></td><td class='cl'><div>AURANGABAD</div></td><td class='cl'><div>India</div></td><td class='cl'><div>IN-431 210</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>10680</div></td><td class='cl'><div>18322-WOCKHARDT LIMITED</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>2014-04-17</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>robinsonj2 (UK_MHRA) </div></td><td class='cl'><div>2014-04-17 08:14:11 GMT</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=23259'><span>14IPP036</span></a></td><td class='cl'><div>TABUK PHARMACEUTICAL MANUFACTURING CO . - TABUK</div></td><td class='cl'><div>TABUK</div></td><td class='cl'><div>SAUDI ARABIA, KINGDOM OF </div></td><td class='cl'><div>9222-47532</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>11496</div></td><td class='cl'><div>A041 3790 220</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>2014-04-10</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>jmorenas (FR_ANSM) </div></td><td class='cl'><div>2014-04-10 12:36:10 GMT</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=23187'><span>4.1.2-2013-074082</span></a></td><td class='cl'><div>Seikagaku Corporation</div></td><td class='cl'><div>Takahagi-shi</div></td><td class='cl'><div>Japan</div></td><td class='cl'><div>318-0001</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>25088</div></td><td class='cl'><div>250881396422494902</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>2014-04-02</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>hoglinga (SE_MPA) </div></td><td class='cl'><div>2014-04-02 08:08:14 GMT</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=23163'><span>UK MIA 34140 Insp GMP/IMP 34140/113925-0006 NCR</span></a></td><td class='cl'><div>SCM PHARMA LIMITED</div></td><td class='cl'><div>PRUDHOE</div></td><td class='cl'><div>United Kingdom</div></td><td class='cl'><div>NE42 6PX</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>7135</div></td><td class='cl'><div>113925-SCM PHARMA LIMITED</div></td><td class='cl'><div>UK MIA 34140</div></td><td class='cl'><div>2014-04-01</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>robinsonj2 (UK_MHRA) </div></td><td class='cl'><div>2014-04-01 14:26:07 GMT</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=23182'><span>UK MANA 34140 Insp GMP/IMP 34140/113925-0006 NCR</span></a></td><td class='cl'><div>SCM PHARMA LIMITED</div></td><td class='cl'><div>PRUDHOE</div></td><td class='cl'><div>United Kingdom</div></td><td class='cl'><div>NE42 6PX</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>7135</div></td><td class='cl'><div>113925-SCM PHARMA LIMITED</div></td><td class='cl'><div>UK ManA 34140</div></td><td class='cl'><div>2014-04-01</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>robinsonj2 (UK_MHRA) </div></td><td class='cl'><div>2014-04-01 14:25:43 GMT</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=23183'><span>UK MIA(IMP) 34140 Insp GMP/IMP 34140/113925-0006 NCR</span></a></td><td class='cl'><div>SCM PHARMA LIMITED</div></td><td class='cl'><div>PRUDHOE</div></td><td class='cl'><div>United Kingdom</div></td><td class='cl'><div>NE42 6PX</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>7135</div></td><td class='cl'><div>113925-SCM PHARMA LIMITED</div></td><td class='cl'><div>UK MIA(IMP) 34140</div></td><td class='cl'><div>2014-04-01</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>robinsonj2 (UK_MHRA) </div></td><td class='cl'><div>2014-04-01 14:25:14 GMT</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=23137'><span>14MPP018</span></a></td><td class='cl'><div>PUNJAB CHEMICALS AND CROP CORPORATION LIMITED</div></td><td class='cl'><div>Lalru</div></td><td class='cl'><div>India</div></td><td class='cl'><div>140501</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>25077</div></td><td class='cl'><div>250771396342337859</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>2014-03-31</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>grenaud (FR_ANSM) </div></td><td class='cl'><div>2014-04-01 09:52:17 GMT</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=22998'><span>UK GMP 31450 Insp GMP 31450/360311-0005 NCR</span></a></td><td class='cl'><div>IND-SWIFT LIMITED</div></td><td class='cl'><div>DISTRICT S.A.S. NAGAR (MOHALI)</div></td><td class='cl'><div>India</div></td><td class='cl'><div>IN-140507</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>8787</div></td><td class='cl'><div>360311-IND-SWIFT LIMITED</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>2014-03-21</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>ngrewal (UK_MHRA) </div></td><td class='cl'><div>2014-03-21 15:06:42 GMT</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=22715'><span>14MPP024</span></a></td><td class='cl'><div>SOMET</div></td><td class='cl'><div>MONACO</div></td><td class='cl'><div>Monaco</div></td><td class='cl'><div>98000</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>9170</div></td><td class='cl'><div>A067 6822 597</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>2014-03-05</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>grenaud (FR_ANSM) </div></td><td class='cl'><div>2014-03-10 12:54:23 GMT</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPNonCompliance.do;jsessionid=kqdnTXyhwvb8LQQTPTnTfmxynNth11Mcy7Lk2fQvYSNdJSRqllgn!652217945?ctrl=searchGMPNCResultControlList&action=Drilldown&param=22588'><span>13MPP057</span></a></td><td class='cl'><div>Smruthi Organics Limited</div></td><td class='cl'><div>Taluka Mohol</div></td><td class='cl'><div>India</div></td><td class='cl'><div>413 255 Solapur, Maharashtra</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>15103</div></td><td class='cl'><div>151031360840861198</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>2014-01-08</div></td><td class='cl'><div>&#160;</div></td><td class='cl'><div>sjellema (NL_IGZ) </div></td><td class='cl'><div>2014-02-28 09:45:25 GMT</div></td></tr></table></td></tr></table></td></tr></tbody></table><script type='text/javascript' language='JavaScript'>
+<!--
+var lc_ctrl1577191247 = new ListControl('ctrl1577191247');
+// -->
+</script></span><!-- END: com.cc.framework.ui.painter.def.DefListPainter -->
+
+  
+</form>
+</body>
+</html>
+                
+              </td>
+              <td width="40">&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+        <td width="40px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- 5px while line -->
+      <tr class="border_l_n_r">
+        <td width="40px" height="5px" nowrap="nowrap"/>
+        <td height="5px" class="border_l_n_r">&nbsp;</td>
+        <td width="40px" height="5px" nowrap="nowrap" class="border_l_n_r"/>
+      </tr>
+      <!-- Content  -->
+      <tr>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td height="20px" class="border_l_n_r">&nbsp;</td>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- bottom curves  -->
+      <tr>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="left">
+                <img src="image/common/ep_b_l_corner2.jpg" width="22" align="absbottom"/>
+              </td>
+              <td width="100%" align="center" class="border_bottom">&nbsp;</td>
+              <td align="right">
+                <img src="image/common/EP_b_r_corner2.jpg" width="23" align="absbottom"/>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- trade mark  -->
+      <tr valign="bottom">
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td valign="bottom" height="20px" align="center">
+          <table>
+            <tr vAlign="bottom">
+              <td vAlign="bottom">
+                	
+    <table><tr vAlign=bottom><td vAlign=bottom><font size="1" face="arial" color="#333333">
+	<script>
+function openInNewWindowCA()
+ {
+	   window.open('viewCompetentAuthorityAddresses.do','print','scrollbars=yes,status=no,titlebar=no,resizable=yes,menubar=no');
+	   }
+</script>
+The EudraGMDP database is maintained and operated by the EMA. Access to the general public is granted in order to enhance availability of information related to the EMA mandate.  The content of the database is provided by the National Competent Authorities (NCA) of the EEA. For this reason, the EMA accepts no responsibility or liability whatsoever (including but not limited to any direct or consequential loss or damage it might occur to you and/or any other third party) arising out of or in connection with the information on this database.  Any questions about the content should be addressed to the relevant NCA. Please <a href="javascript:openInNewWindowCA()" style="text-decoration: underline;padding-left:0px;padding-right:0px">click here</a> to get list of NCA's.
+</td></tr>
+	<tr vAlign=bottom>
+            <td vAlign=bottom align="center">
+                <font size="1" face="arial" color="#333333">[EMA &copy; 2007. EudraGMP 
+                
+                
+5.1.2.1 build 2014/03/14 17:31:28
+
+]
+            </td></tr></table>                
+              </td>
+              <td vAlign="bottom"> 
+               <iframe name="beansAlive" src="http://eudragmdp.ema.europa.eu:80/inspections/keepBeansAlive.do"
+			   width="0" height="0" frameborder="0" /> 
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- bottom margin -->
+      <tr vAlign="bottom">
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td valign="bottom" height="20px">&nbsp;</td>
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
