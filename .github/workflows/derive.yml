@@ -29,7 +29,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.53"
+  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.55"
 
 jobs:
   derive:

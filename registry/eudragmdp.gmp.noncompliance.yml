@@ -1,5 +1,5 @@
 source_id: eudragmdp.gmp.noncompliance
-status: paused                   # see notes: the engine cannot drive this source yet
+status: paused                   # on purpose: driven by examples/capture.py, see notes
 cadence: monthly
 schema_id: gmpnc.v1
 
@@ -19,14 +19,38 @@ notes: >-
   pharmaceutical manufacturing sites were found non-compliant, where, and when.
   79 rows on 2026-09-22, up from 78 on 2026-09-15, so the register moves.
 
-  PAUSED BECAUSE THE ENGINE CANNOT EXPRESS THIS SOURCE. It is a Struts app
-  needing a four-step handshake: GET the form to obtain a session cookie AND an
-  action URL with an embedded jsessionid; POST the search to that action URL;
-  then walk pages with a session-stateful GET. Endpoint has url/method/body and
-  url_from, but url_from is a JSON-path extractor and nothing carries cookies
-  between fetches. Either the engine grows a session handshake, or this stays a
-  scripted capture outside it. The 2026-09-22 baseline was taken by hand and
-  lives in raw/.
+  PAUSED MEANS "THE ENGINE DOES NOT DRIVE THIS", NOT "NOTHING CAPTURES IT".
+  It is a Struts app needing a four-step handshake: GET the form for a session
+  cookie AND an action URL with an embedded jsessionid; POST the search to that
+  action URL (btnSearchGMPNC must be the literal string `clicked` -- an empty
+  value returns the form and the form page already shows recent statements, so
+  it looks like it worked); then read a session-stateful result list. The
+  engine carries no cookies between fetches and is not growing a session
+  primitive for one source, so `examples/capture.py` does the driving and
+  writes through the engine's own storage, gates and manifest code. This entry
+  still governs it: licence, gates, schema and personal_data all apply.
+  `wss plan` returning [] is the correct answer, which is why the workflow has
+  no shard matrix.
+
+  THE EXPORT IS THE REAL SOURCE. `action=ExportList` returns the WHOLE register
+  as one .xls, and it is strictly richer than the HTML: 17 columns against 11,
+  adding Last Updated Date, DUNS Number, Site NCA Reference and the address
+  split into four fields. LAST UPDATED DATE IS THE ONE THAT MATTERS -- this
+  register has no status column, so a resolved statement must either be edited
+  in place or vanish, and that column is what dates an in-place edit. It is
+  populated on all 79 rows with 68 distinct values. The sheet also states
+  `Total Records: N`, a count from the publisher rather than one we inferred,
+  and capture.py refuses to write if it disagrees with the rows shipped.
+
+  The 8 HTML pages are captured as well, because that is what the shipped
+  gmpnc.v1 parser reads and a second representation is worth having when the
+  question is what the publisher quietly changed. Verified 2026-09-23: all 71
+  report numbers in the export appear across the 8 pages.
+
+  PAGING IS AN ABSOLUTE ZERO-BASED PAGE INDEX, NOT A STEP. `action=Page&param=2`
+  is the third page from wherever you are; treating it as "next" refetches the
+  same page, which is exactly what happened eight times. The page count comes
+  from the export's own record count, not a guess.
 
   UNIQUE KEY IS (Report Number, EudraGMDP Document Reference Number). Report
   Number alone is NOT unique -- 79 rows carry 71 report numbers because one

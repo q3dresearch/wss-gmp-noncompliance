@@ -1,0 +1,97 @@
+# NOT THE FLEET TEMPLATE, and deliberately so. The fleet workflow shards
+# `wss capture` across whatever the registry marks active at a cadence. This
+# source cannot be driven that way: EudraGMDP is a Struts app needing a
+# four-step session handshake, so the engine carries the registry entry --
+# licence, gates, schema, personal_data -- while `examples/capture.py` does the
+# driving and writes through the engine's own storage and manifest code.
+#
+# The source is therefore `status: paused` ON PURPOSE. Paused means "the engine
+# does not drive this", not "nothing captures it". `wss plan` returning [] is
+# the correct answer here, which is why there is no shard matrix below.
+name: capture-monthly
+
+on:
+  schedule:
+    - cron: "40 3 11 * *" # 11th, off the hour — GitHub's scheduler is contended at :00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fleet-commits
+  cancel-in-progress: false
+
+env:
+  WSS_CONTACT: ${{ secrets.WSS_CONTACT || format('{0} +https://github.com/{1}', github.repository_owner, github.repository) }}
+  CADENCE: monthly
+  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.55"
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install engine
+        run: pip install "$ENGINE_SPEC"
+      - name: Install the .xls reader
+        # The export is legacy BIFF (OLE2), not xlsx, so the stdlib reader and
+        # openpyxl both decline it. Only capture.py needs this.
+        run: pip install xlrd
+      - name: Validate registry (hard gate)
+        # Still a gate: the entry declares the licence, gates and schema the
+        # scripted capture applies, so a malformed entry must stop the run.
+        run: wss validate
+      - name: Capture — scripted handshake
+        run: python examples/capture.py
+      - name: Drop quarantine (triage lives in CI artifacts, never in git)
+        if: always()
+        run: |
+          if [ -d quarantine ]; then tar -czf quarantine.tgz quarantine && rm -rf quarantine; fi
+      - name: Upload quarantine
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: quarantine-${{ github.run_id }}
+          path: quarantine.tgz
+          if-no-files-found: ignore
+          retention-days: 90
+      # Records what was attempted, not just that the cron fired. A heartbeat
+      # that only proves liveness let two repos report a perfect run while
+      # capturing nothing.
+      - name: Heartbeat — what this run actually planned
+        if: always()
+        run: |
+          mkdir -p state
+          printf '{"cadence":"%s","sources_planned":1,"completed_at":"%s","run_id":"%s","workflow":"%s"}\n' \
+            "$CADENCE" "$(date -u +%FT%TZ)" "${{ github.run_id }}" "${{ github.workflow }}" \
+            > state/last_run.json
+      - name: Commit with rebase-retry
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A raw manifest state
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "capture($CADENCE): run ${{ github.run_id }}"
+          for i in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            sleep $((i * 5))
+            # `git pull --rebase` leaves a CONFLICTED TREE when it fails, and
+            # the next push then fails for a different reason than the first.
+            # Abort so each attempt starts clean; `merge=union` in
+            # .gitattributes resolves the append-only manifest automatically.
+            if ! git pull --rebase; then
+              git rebase --abort || true
+              echo "rebase conflict on attempt $i -- not a push race" >&2
+            fi
+          done
+          echo "push failed after 5 attempts" >&2
+          exit 1

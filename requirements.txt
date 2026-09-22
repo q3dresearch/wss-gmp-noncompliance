@@ -1,4 +1,8 @@
 # This repo pins one engine version; the workflows install the same pin
 # (resolving the owner as ${{ github.repository_owner }}). For local
 # development against a sibling checkout: pip install -e ../wss
-wss[object] @ git+https://github.com/q3dresearch/wss-engine.git@v0.6.53
+wss[object] @ git+https://github.com/q3dresearch/wss-engine.git@v0.6.55
+
+# capture.py only: the EudraGMDP export is legacy BIFF (.xls), which neither
+# the stdlib nor openpyxl reads.
+xlrd>=2.0
