@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'><rect width="940" height="430" fill="#fcfcfb"/>
+<text x="28.0" y="40.0" font-size="19" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">Publication lag is a long right tail, not a delay you can bound.</text>
+<text x="28.0" y="62.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">FOR</text>
+<text x="28.0" y="77.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">anyone treating EudraGMDP as a current picture</text>
+<text x="28.0" y="90.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">of compliance</text>
+<text x="322.7" y="62.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">DECIDE</text>
+<text x="322.7" y="77.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">how long after an inspection a site's absence</text>
+<text x="322.7" y="90.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">still means nothing</text>
+<text x="617.3" y="62.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">WRONG IF</text>
+<text x="617.3" y="77.0" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">if a second capture shows the tail is backdated</text>
+<text x="617.3" y="90.5" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">corrections, not slow publication</text>
+<line x1="28" y1="100.0" x2="912" y2="100.0" stroke="#e3e2db"/>
+<rect x="70.0" y="232.0" width="26.6" height="112.0" rx="2" fill="#1f6f8b"/>
+<rect x="99.6" y="144.0" width="26.6" height="200.0" rx="2" fill="#1f6f8b"/>
+<rect x="129.3" y="272.0" width="26.6" height="72.0" rx="2" fill="#1f6f8b"/>
+<rect x="158.9" y="304.0" width="26.6" height="40.0" rx="2" fill="#1f6f8b"/>
+<rect x="188.6" y="296.0" width="26.6" height="48.0" rx="2" fill="#1f6f8b"/>
+<rect x="218.2" y="312.0" width="26.6" height="32.0" rx="2" fill="#1f6f8b"/>
+<rect x="277.5" y="312.0" width="26.6" height="32.0" rx="2" fill="#1f6f8b"/>
+<rect x="307.1" y="320.0" width="26.6" height="24.0" rx="2" fill="#1f6f8b"/>
+<rect x="336.8" y="336.0" width="26.6" height="8.0" rx="2" fill="#1f6f8b"/>
+<rect x="396.1" y="304.0" width="26.6" height="40.0" rx="2" fill="#1f6f8b"/>
+<rect x="455.4" y="336.0" width="26.6" height="8.0" rx="2" fill="#1f6f8b"/>
+<rect x="603.6" y="336.0" width="26.6" height="8.0" rx="2" fill="#1f6f8b"/>
+<rect x="840.7" y="336.0" width="26.6" height="8.0" rx="2" fill="#1f6f8b"/>
+<text x="70.0" y="362.0" font-size="11" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">0</text>
+<text x="188.6" y="362.0" font-size="11" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">120</text>
+<text x="307.1" y="362.0" font-size="11" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">240</text>
+<text x="425.7" y="362.0" font-size="11" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">360</text>
+<text x="544.3" y="362.0" font-size="11" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">480</text>
+<text x="662.9" y="362.0" font-size="11" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">600</text>
+<text x="781.4" y="362.0" font-size="11" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">720</text>
+<text x="900.0" y="362.0" font-size="11" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">840</text>
+<line x1="70" y1="344.0" x2="900" y2="344.0" stroke="#e3e2db"/>
+<text x="485.0" y="384.0" font-size="11.5" fill="#52514e" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">days from inspection end to statement issue</text>
+<line x1="133.2" y1="134.0" x2="133.2" y2="344.0" stroke="#b4531f" stroke-width="2"/>
+<text x="139.2" y="146.0" font-size="11.5" fill="#b4531f" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">median 64d</text>
+<line x1="404.0" y1="134.0" x2="404.0" y2="344.0" stroke="#8a8880" stroke-width="2"/>
+<text x="410.0" y="146.0" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">p90 338d</text>
+<text x="28.0" y="392.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">79 statements · 30-day bins · half are published within 64 days and a tenth take more than 338</text>
+<text x="28.0" y="410.0" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">longest: 800 days — over two years between the inspection ending and the statement appearing</text>
+</svg>

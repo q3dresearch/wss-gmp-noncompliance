@@ -1,0 +1,118 @@
+{
+ "INDIA": {
+  "certs": 1050,
+  "nc": 28
+ },
+ "ITALY": {
+  "certs": 1435,
+  "nc": 4
+ },
+ "SPAIN": {
+  "certs": 665,
+  "nc": 2
+ },
+ "CHINA": {
+  "certs": 379,
+  "nc": 10
+ },
+ "SRI LANKA": {
+  "certs": null,
+  "nc": 1
+ },
+ "NETHERLANDS": {
+  "certs": 385,
+  "nc": 4
+ },
+ "CZECHIA": {
+  "certs": 1070,
+  "nc": 4
+ },
+ "PORTUGAL": {
+  "certs": 326,
+  "nc": 1
+ },
+ "MALAYSIA": {
+  "certs": 16,
+  "nc": 1
+ },
+ "UNITED STATES": {
+  "certs": 594,
+  "nc": 2
+ },
+ "CANADA": {
+  "certs": 52,
+  "nc": 2
+ },
+ "T\u00dcRKIYE": {
+  "certs": 103,
+  "nc": 1
+ },
+ "SOUTH AFRICA": {
+  "certs": 15,
+  "nc": 2
+ },
+ "POLAND": {
+  "certs": 1332,
+  "nc": 4
+ },
+ "TAIWAN": {
+  "certs": 26,
+  "nc": 1
+ },
+ "INDONESIA": {
+  "certs": null,
+  "nc": 1
+ },
+ "LEBANON": {
+  "certs": null,
+  "nc": 1
+ },
+ "BANGLADESH": {
+  "certs": 21,
+  "nc": 1
+ },
+ "CYPRUS": {
+  "certs": 112,
+  "nc": 1
+ },
+ "FRANCE": {
+  "certs": 1410,
+  "nc": 1
+ },
+ "ROMANIA": {
+  "certs": 183,
+  "nc": 2
+ },
+ "HUNGARY": {
+  "certs": 738,
+  "nc": 1
+ },
+ "GERMANY": {
+  "certs": 2239,
+  "nc": 1
+ },
+ "SWITZERLAND": {
+  "certs": 555,
+  "nc": 1
+ },
+ "AUSTRIA": {
+  "certs": 1060,
+  "nc": 2
+ },
+ "IRELAND": {
+  "certs": 442,
+  "nc": 0
+ },
+ "BELGIUM": {
+  "certs": 536,
+  "nc": 0
+ },
+ "JAPAN": {
+  "certs": 293,
+  "nc": 0
+ },
+ "KOREA, REPUBLIC OF": {
+  "certs": 67,
+  "nc": 0
+ }
+}

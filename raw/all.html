@@ -1,0 +1,1125 @@
+
+
+
+
+
+
+<html>
+  <head>
+    <META HTTP-EQUIV=Refresh CONTENT="1750; URL=/inspections/triggerSessionTimeOut.do">
+    <base href="/inspections/"/>
+    
+	<!-- painter 'global' -->
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/common.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/environment.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/utility.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/formatter.js'></script>
+	<!-- end -->
+
+	<!-- painter 'html' -->
+	<!-- end -->
+
+	<!-- painter 'def' -->
+	<link rel='stylesheet' href='fw/def/style/default.css' charset='ISO-8859-1' type='text/css'>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/functions.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/resourcemap.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/controls.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tabset.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tree.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/list.js'></script>
+	<!-- end -->
+
+	<title>
+	 	
+		
+			Eudra GMP - Public Layout
+		
+	</title>
+	<link rel="icon" href="/inspections/favicon.ico" type="image/x-icon">
+	<script src="script/prototype.js" type="text/javascript"></script>
+	<script src="script/scriptaculous.js" type="text/javascript"></script>
+	<script src="script/registeredLayout_tile.js" type="text/javascript"></script>
+	<script language="javascript">
+ 		function onMenuClicked(targetUrl)
+		{
+			
+   			return true;
+		}
+ 		
+ 		function cookiesBannerShow() {
+ 			new Ajax.Request('/inspections/exc/cookies', {
+		        method: 'GET',
+		        onComplete: function(response) {
+		            var json = response.responseText.evalJSON();
+		            if (json.showCookies == true) {
+		                $('cookie_window').show();
+		            }
+		        }
+		    });
+		}
+
+	    function acceptCookies() {
+            new Ajax.Request('/inspections/exc/cookies/accept', {
+                method: 'POST',
+                onComplete: function(response) {
+                    window.location.reload();
+                }
+            });
+        }
+	    
+	    document.observe("dom:loaded", function() {
+		    cookiesBannerShow();
+		});
+	</script>
+ </head>
+ 
+  <body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0">
+
+    <table id="cookie_window" style="display: none">
+        <tbody>
+            <tr>
+                <td class="message">We use only First-Party essential cookies to make our website work and provide you with our services. No optional cookies are used. Learn more in our <a href="/inspections/exc/cookies/info">Cookies Policy</a>.</td>
+                <td class="button_box"><button type="button" onclick="acceptCookies()">OK</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" class="fullHeight" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <!-- top eurologo -->
+        <td vAlign="top" height="20px" colspan="3">
+          <table cellpadding="0" cellspacing="0" width="100%" border="0">
+            <tr>
+              <td width="20px" valign="bottom" height="20px" bgcolor="#151E61">
+                <img src="image/common/eu_logo.jpg" border="0"/>
+              </td>
+              <td bgcolor="#151E61" valign="top" nowrap="nowrap"/>
+              <td bgcolor="#151E61" width="90%" class="class2">&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- top  margin -->
+      <tr vAlign="top">
+        <td vAlign="top" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td vAlign="top" height="20px">&nbsp;</td>
+        <td vAlign="top" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- top curve and logo  -->
+      <tr vAlign="top">
+        <td vAlign="top" width="40px" nowrap="nowrap">&nbsp;</td>
+        <td vAlign="top" height="1">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td vAlign="top" align="left" bgcolor="#080063">
+                
+
+  
+     <a href="displayHome.do"><img src="image/common/EudraGMP_small_logo.jpg" width="204" border="0" alt="EudraGMP Homepage"/></a>
+    
+
+              </td>
+              <td vAlign="top" width="100%" bgcolor="#080063">&nbsp;<font color="white" size="6">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td vAlign="top" align="right" bgcolor="#080063">
+                <img src="image/common/eu_b_r_corner_small.jpg" width="23"/>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td width="40px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- 5px while line -->
+      <tr>
+        <td width="40px" height="5px" nowrap="nowrap"/>
+        <td height="5px"/>
+        <td width="40px" height="5px" nowrap="nowrap"/>
+      </tr>
+      <tr>
+        <td width="40px" nowrap="nowrap">&nbsp;</td>
+        <td valign="top" class="border_l_n_r">
+          <!-- Horizontal Menu -->
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr height="24px" bgcolor="#8C88B6" class="gmpHeader">
+              <td height="5px" nowrap="nowrap" width="15px"/>
+              <td align="left" valign="middle" nowrap="nowrap" class="class1">
+                
+
+
+
+
+
+
+
+
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+<SCRIPT LANGUAGE="JavaScript">
+	
+	function confirmLogout(target)
+	{
+			if(window.confirm(document.forms[0].logoutConfirmMessage.value)) {
+				
+						document.forms[0].submit();
+				
+			}
+	}
+	
+	</SCRIPT>
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <td nowrap="nowrap">
+     
+        <a href="mia/index.do">MIA</a>
+      
+    
+      <FONT color="#ffffff">|</FONT> 
+
+      
+        <a href="gmpc/index.do">GMP</a>
+      
+      
+      <FONT color="#ffffff">|</FONT> 
+
+      
+        <a href="view/apiReg/APIRegistrationHome.xhtml">API REG</a>
+      
+      
+      <FONT color="#ffffff">|</FONT> 
+
+      
+        <a href="view/wda/WDAHomePage.xhtml">WDA</a>
+      
+      
+      <FONT color="#ffffff">|</FONT> 
+      
+       
+        <a href="view/common/GDPHomePage.xhtml">GDP</a>
+      
+
+      <FONT color="#ffffff">|</FONT> 
+
+    <a href="/inspections/exc/sites">Sites</a>
+
+
+	
+	</td>
+	 
+ <td align="right"> 
+	
+	
+      <a href="https://eudragmdp.ema.europa.eu/help_public/Default.htm" target="_blank">Help</a>
+    </td>
+   	
+	
+	  </tr>
+</table>
+
+              </td>
+              <td align="right" height="1px">
+                
+              </td>
+            </tr>
+            <tr height="1px" bgcolor="#ffffff">
+              <td colspan="3" height="1px"/>
+            </tr>
+            <tr bgcolor="#EFEFEF">
+              <td colspan="3" align="right" >
+                
+                
+
+<!--%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %-->
+
+<span align="left">
+<font size="2" ><i>
+
+
+Tue 22 Sep 2026 07:11:57 BST
+
+</i>
+</font>
+</span>
+              </td>
+            </tr>
+          </table>
+          <!-- Vertical Menu -->
+          <table width="100%" border="0" cellspacing="0" cellpadding="10">
+            <tr>
+              <td width="41" valign="top">
+                
+
+
+
+
+
+
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+
+
+
+<!-- BEGIN: com.cc.framework.ui.painter.def.DefFormDisplayPainter [null] -->
+
+  
+ 
+  
+<span><input name='formid' type='hidden' value='gmpcMenu'><table cellspacing='0' width='100%' class='fc' border='0' cellpadding='0'><thead><tr><td><table cellspacing='0' class='fch' border='0' cellpadding='0'><tr><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/l.gif'></td><td width='100%'><table cellpadding='0' width='100%' cellspacing='3'><tr><td nowrap class='c'>GMP Compliance Menu</td><td width='100%'>&#160;</td></tr></table></td><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/r.gif'></td></tr></table></td></tr></thead><tbody><tr><td><table cellspacing='0' width='100%' class='fcb' cellpadding='0'><tr><td><table cellspacing='0' width='100%' class='ibody' cellpadding='0'><tr rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='2' class='fd'><table width="200">
+       
+    </table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr><td colspan='4' class='section'>Search</td></tr><tr rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='2' class='fd'><table width="200">
+	    
+        <tr>
+          <td>
+             
+               <a href="gmpc/searchGMPCompliance.do">GMP Certificates</a>
+			  
+          </td>
+        </tr>
+	
+        <tr>
+          <td>
+		      
+                     <a href="gmpc/searchGMPNonCompliance.do">Non-Compliance Report</a>
+			  
+          </td>
+        </tr>
+         
+    </table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr></table></td></tr></table></td></tr></tbody></table></span><!-- END: com.cc.framework.ui.painter.def.DefFormDisplayPainter -->
+
+              </td>
+              <td valign="top" id="content">
+                
+
+
+
+
+
+
+
+
+
+<!--link rel='stylesheet' href="../fw/def/style/default.css" type='text/css'-->
+
+<script src="script/basic.js" type="text/javascript"></script>
+<script src="script/prototype.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+<script src="script/scriptaculous.js" type="text/javascript"></script>
+<script src="script/searchGMPCompliancesCnt.js" type="text/javascript"></script>
+
+
+
+
+<body onLoad="toggleAll()">
+	
+	<!-- painter 'global' -->
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/common.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/environment.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/utility.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/global/jscript/formatter.js'></script>
+	<!-- end -->
+
+	<!-- painter 'html' -->
+	<!-- end -->
+
+	<!-- painter 'def' -->
+	<link rel='stylesheet' href='fw/def/style/default.css' charset='ISO-8859-1' type='text/css'>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/functions.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/resourcemap.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/controls.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tabset.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/tree.js'></script>
+	<script type='text/javascript' language='JavaScript' src='fw/def/jscript/list.js'></script>
+	<!-- end -->
+
+	
+	
+	<form name="GMPCSearchForm" method="post" action="/inspections/gmpc/searchGMPCompliance.do">
+
+		
+<!-- BEGIN: com.cc.framework.ui.painter.def.DefFormEditPainter [null] -->
+
+			
+			
+
+			
+			
+
+			
+			
+
+			
+
+			
+
+			<!-- Legal Basis Scope -->
+
+			
+
+			<!-- Legal Basis Type Of Inspection -->
+
+			
+
+
+			<!-- Operations -->
+
+			
+
+			<!-- api search -->
+			
+
+            
+            
+
+			
+
+			
+
+		<span><input name='formid' type='hidden' value='frmGMPCSearch'><table cellspacing='0' width='100%' class='fc' border='0' cellpadding='0'><thead><tr><td><table cellspacing='0' class='fch' border='0' cellpadding='0'><tr><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/l.gif'></td><td width='100%'><table cellpadding='0' width='100%' cellspacing='3'><tr><td nowrap class='c'>Search GMP Compliance</td><td width='100%'>&#160;</td></tr></table></td><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/r.gif'></td></tr></table></td></tr></thead><tbody><tr><td><table cellspacing='0' width='100%' class='fcb' cellpadding='0'><tr><td><table cellspacing='0' width='100%' class='ibody' cellpadding='0'><tr id='tr_certificateNumber' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>Certificate Number:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='certificateNumber' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_fromDate' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td valign='center' class='fl'><label>From Date:</label></td><td class='fd' valign='center' colspan='10' nowrap><table cellpadding='0' cellspacing='0' border='0'><tr valign='middle'><td align='middle'><input size='8' id='ctrl1194614548' value='1990-01-01' name='fromDate' maxlength='10' type='text'></td><td style='padding-left:5px;' align='middle'><a href="javascript:popupCalendar('ctrl1194614548','EN_UK','YYYY-MM-DD',380,240,'/inspections/fw/html/calendar/layout1/calendar.jsp');"><img width='16' height='15' border='0' src='fw/html/image/imgCalendar1.gif'></a></td><td style='padding-left:5px;font-size:8pt;' align='middle'>(YYYY-MM-DD)</td></tr></table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_toDate' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td valign='center' class='fl'><label>To Date:</label></td><td class='fd' valign='center' colspan='10' nowrap><table cellpadding='0' cellspacing='0' border='0'><tr valign='middle'><td align='middle'><input size='8' id='ctrl224070906' value='2026-09-22' name='toDate' maxlength='10' type='text'></td><td style='padding-left:5px;' align='middle'><a href="javascript:popupCalendar('ctrl224070906','EN_UK','YYYY-MM-DD',380,240,'/inspections/fw/html/calendar/layout1/calendar.jsp');"><img width='16' height='15' border='0' src='fw/html/image/imgCalendar1.gif'></a></td><td style='padding-left:5px;font-size:8pt;' align='middle'>(YYYY-MM-DD)</td></tr></table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr><td colspan='14' class='section'>Site Details</td></tr><tr rowtype='container'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>DUNS Number:</label></td><td nowrap class='fd'><span>&#160;</span></td><td colspan='3' align='left' class='fd'><input type="text" name="dunsNumber1" maxlength="2" size="2" value="" onkeyup="javascript:tabToNextElement(this,'dunsNumber2');"> - <input type="text" name="dunsNumber2" maxlength="3" size="3" value="" onkeyup="javascript:tabToNextElement(this,'dunsNumber3');" id="dunsNumber2"> - <input type="text" name="dunsNumber3" maxlength="4" size="4" value="" id="dunsNumber3"></td><td class='fe'>&#160;</td><td class='fl'><label>&#160;</label></td><td nowrap class='fd'><span>&#160;</span></td><td colspan='3' align='right' class='fd'>&#160;</td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_siteName' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>Name:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='siteName' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_city' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>City:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='city' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_country' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>Country:</label></td><td nowrap colspan='10' class='fd'><select name='country'><option value='' style='width:100%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value='all.countries' selected style='width:100%'> [-- All Countries --  ]</option>
+<option value='third.countries' style='width:100%'> [-- All Third Countries --  ]</option>
+<option value='eu.countries' style='width:100%'> [-- EEA --  ]</option>
+<option value='c=af,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>AFGHANISTAN</option>
+<option value='c=al,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ALBANIA</option>
+<option value='c=dz,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ALGERIA</option>
+<option value='c=ad,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ANDORRA</option>
+<option value='c=ao,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ANGOLA</option>
+<option value='c=ag,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ANTIGUA AND BARBUDA</option>
+<option value='c=ar,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ARGENTINA</option>
+<option value='c=am,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ARMENIA</option>
+<option value='c=au,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>AUSTRALIA</option>
+<option value='c=at,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>AUSTRIA</option>
+<option value='c=az,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>AZERBAIJAN</option>
+<option value='c=bs,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BAHAMAS</option>
+<option value='c=bh,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BAHRAIN</option>
+<option value='c=bd,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BANGLADESH</option>
+<option value='c=bb,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BARBADOS</option>
+<option value='c=by,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BELARUS</option>
+<option value='c=be,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BELGIUM</option>
+<option value='c=bz,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BELIZE</option>
+<option value='c=bj,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BENIN</option>
+<option value='c=bt,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BHUTAN</option>
+<option value='c=bo,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BOLIVIA, PLURINATIONAL STATE OF</option>
+<option value='c=ba,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BOSNIA AND HERZEGOVINA</option>
+<option value='c=bw,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BOTSWANA</option>
+<option value='c=br,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BRAZIL</option>
+<option value='c=bn,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BRUNEI DARUSSALAM</option>
+<option value='c=bg,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BULGARIA</option>
+<option value='c=bf,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BURKINA FASO</option>
+<option value='c=bi,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>BURUNDI</option>
+<option value='c=kh,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CAMBODIA</option>
+<option value='c=cm,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CAMEROON</option>
+<option value='c=ca,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CANADA</option>
+<option value='c=cv,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CAPE VERDE</option>
+<option value='c=cf,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CENTRAL AFRICAN REPUBLIC</option>
+<option value='c=td,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CHAD</option>
+<option value='c=cl,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CHILE</option>
+<option value='c=cn,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CHINA</option>
+<option value='c=co,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>COLOMBIA</option>
+<option value='c=km,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>COMOROS</option>
+<option value='c=cg,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CONGO</option>
+<option value='c=cd,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+<option value='c=cr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>COSTA RICA</option>
+<option value='c=ci,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CÔTE D’IVOIRE</option>
+<option value='c=hr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CROATIA</option>
+<option value='c=cu,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CUBA</option>
+<option value='c=cy,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CYPRUS</option>
+<option value='c=cz,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>CZECHIA</option>
+<option value='c=dk,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>DENMARK</option>
+<option value='c=dj,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>DJIBOUTI</option>
+<option value='c=dm,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>DOMINICA</option>
+<option value='c=do,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>DOMINICAN REPUBLIC</option>
+<option value='c=ec,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ECUADOR</option>
+<option value='c=eg,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>EGYPT</option>
+<option value='c=sv,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>EL SALVADOR</option>
+<option value='c=gq,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>EQUATORIAL GUINEA</option>
+<option value='c=er,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ERITREA</option>
+<option value='c=ee,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ESTONIA</option>
+<option value='c=sz,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ESWATINI</option>
+<option value='c=et,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ETHIOPIA</option>
+<option value='c=fj,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>FIJI</option>
+<option value='c=fi,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>FINLAND</option>
+<option value='c=fr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>FRANCE</option>
+<option value='c=ga,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GABON</option>
+<option value='c=gm,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GAMBIA</option>
+<option value='c=ge,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GEORGIA</option>
+<option value='c=de,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GERMANY</option>
+<option value='c=gh,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GHANA</option>
+<option value='c=gr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GREECE</option>
+<option value='c=gd,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GRENADA</option>
+<option value='c=gt,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GUATEMALA</option>
+<option value='c=gn,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GUINEA</option>
+<option value='c=gw,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GUINEA-BISSAU</option>
+<option value='c=gy,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>GUYANA</option>
+<option value='c=ht,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>HAITI</option>
+<option value='c=va,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>HOLY SEE (VATICAN CITY STATE)</option>
+<option value='c=hn,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>HONDURAS</option>
+<option value='c=hu,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>HUNGARY</option>
+<option value='c=is,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ICELAND</option>
+<option value='c=in,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>INDIA</option>
+<option value='c=id,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>INDONESIA</option>
+<option value='c=ir,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>IRAN, ISLAMIC REPUBLIC OF</option>
+<option value='c=iq,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>IRAQ</option>
+<option value='c=ie,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>IRELAND</option>
+<option value='c=il,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ISRAEL</option>
+<option value='c=it,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ITALY</option>
+<option value='c=jm,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>JAMAICA</option>
+<option value='c=jp,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>JAPAN</option>
+<option value='c=jo,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>JORDAN</option>
+<option value='c=kz,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>KAZAKHSTAN</option>
+<option value='c=ke,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>KENYA</option>
+<option value='c=ki,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>KIRIBATI</option>
+<option value='c=kp,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF</option>
+<option value='c=kr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>KOREA, REPUBLIC OF</option>
+<option value='c=xk,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>KOSOVO</option>
+<option value='c=kw,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>KUWAIT</option>
+<option value='c=kg,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>KYRGYZSTAN</option>
+<option value='c=la,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>LAO PEOPLE'S DEMOCRATIC REPUBLIC</option>
+<option value='c=lv,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>LATVIA</option>
+<option value='c=lb,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>LEBANON</option>
+<option value='c=ls,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>LESOTHO</option>
+<option value='c=lr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>LIBERIA</option>
+<option value='c=ly,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>LIBYAN ARAB JAMAHIRIYA</option>
+<option value='c=li,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>LIECHTENSTEIN</option>
+<option value='c=lt,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>LITHUANIA</option>
+<option value='c=lu,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>LUXEMBOURG</option>
+<option value='c=mg,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MADAGASCAR</option>
+<option value='c=mw,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MALAWI</option>
+<option value='c=my,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MALAYSIA</option>
+<option value='c=mv,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MALDIVES</option>
+<option value='c=ml,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MALI</option>
+<option value='c=mt,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MALTA</option>
+<option value='c=mh,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MARSHALL ISLANDS</option>
+<option value='c=mr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MAURITANIA</option>
+<option value='c=mu,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MAURITIUS</option>
+<option value='c=mx,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MEXICO</option>
+<option value='c=fm,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MICRONESIA, FEDERATED STATES OF</option>
+<option value='c=md,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MOLDOVA, REPUBLIC OF</option>
+<option value='c=mc,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MONACO</option>
+<option value='c=mn,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MONGOLIA</option>
+<option value='c=me,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MONTENEGRO</option>
+<option value='c=ma,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MOROCCO</option>
+<option value='c=mz,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MOZAMBIQUE</option>
+<option value='c=mm,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>MYANMAR</option>
+<option value='c=na,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NAMIBIA</option>
+<option value='c=nr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NAOERO</option>
+<option value='c=np,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NEPAL</option>
+<option value='c=nl,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NETHERLANDS</option>
+<option value='c=nz,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NEW ZEALAND</option>
+<option value='c=ni,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NICARAGUA</option>
+<option value='c=ne,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NIGER</option>
+<option value='c=ng,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NIGERIA</option>
+<option value='c=mk,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NORTH MACEDONIA</option>
+<option value='c=no,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>NORWAY</option>
+<option value='c=om,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>OMAN</option>
+<option value='c=pk,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>PAKISTAN</option>
+<option value='c=ps,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>PALESTINIAN TERRITORY, OCCUPIED</option>
+<option value='c=pa,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>PANAMA</option>
+<option value='c=pg,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>PAPUA NEW GUINEA</option>
+<option value='c=py,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>PARAGUAY</option>
+<option value='c=pe,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>PERU</option>
+<option value='c=ph,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>PHILIPPINES</option>
+<option value='c=pl,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>POLAND</option>
+<option value='c=pt,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>PORTUGAL</option>
+<option value='c=qa,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>QATAR</option>
+<option value='c=ro,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ROMANIA</option>
+<option value='c=ru,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>RUSSIAN FEDERATION</option>
+<option value='c=rw,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>RWANDA</option>
+<option value='c=kn,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SAINT KITTS AND NEVIS</option>
+<option value='c=lc,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SAINT LUCIA</option>
+<option value='c=vc,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SAINT VINCENT AND THE GRENADINES</option>
+<option value='c=ws,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SAMOA</option>
+<option value='c=sm,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SAN MARINO</option>
+<option value='c=st,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SÃO TOMÉ AND PRÍNCIPE</option>
+<option value='c=sa,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SAUDI ARABIA</option>
+<option value='c=sn,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SENEGAL</option>
+<option value='c=rs,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SERBIA</option>
+<option value='c=sc,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SEYCHELLES</option>
+<option value='c=sl,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SIERRA LEONE</option>
+<option value='c=sg,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SINGAPORE</option>
+<option value='c=sk,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SLOVAKIA</option>
+<option value='c=si,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SLOVENIA</option>
+<option value='c=sb,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SOLOMON ISLANDS</option>
+<option value='c=so,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SOMALIA</option>
+<option value='c=za,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SOUTH AFRICA</option>
+<option value='c=es,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SPAIN</option>
+<option value='c=lk,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SRI LANKA</option>
+<option value='c=sd,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SUDAN</option>
+<option value='c=sr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SURINAME</option>
+<option value='c=se,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SWEDEN</option>
+<option value='c=ch,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SWITZERLAND</option>
+<option value='c=sy,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>SYRIA</option>
+<option value='c=tw,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TAIWAN</option>
+<option value='c=tj,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TAJIKISTAN</option>
+<option value='c=tz,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TANZANIA, UNITED REPUBLIC OF</option>
+<option value='c=th,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>THAILAND</option>
+<option value='c=tl,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TIMOR-LESTE</option>
+<option value='c=tg,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TOGO</option>
+<option value='c=to,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TONGA</option>
+<option value='c=tt,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TRINIDAD AND TOBAGO</option>
+<option value='c=tn,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TUNISIA</option>
+<option value='c=tr,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TÜRKIYE</option>
+<option value='c=tm,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TURKMENISTAN</option>
+<option value='c=tv,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>TUVALU</option>
+<option value='c=ug,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>UGANDA</option>
+<option value='c=ua,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>UKRAINE</option>
+<option value='c=ae,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>UNITED ARAB EMIRATES</option>
+<option value='c=xi,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>UNITED KINGDOM (NORTHERN IRELAND)</option>
+<option value='c=us,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>UNITED STATES</option>
+<option value='c=uy,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>URUGUAY</option>
+<option value='c=uz,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>UZBEKISTAN</option>
+<option value='c=vu,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>VANUATU</option>
+<option value='c=ve,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>VENEZUELA, BOLIVARIAN REPUBLIC OF</option>
+<option value='c=vn,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>VIET NAM</option>
+<option value='c=ye,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>YEMEN</option>
+<option value='c=zm,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ZAMBIA</option>
+<option value='c=zw,dc=countries,dc=ecd,dc=emea,dc=eu,dc=int' style='width:100%'>ZIMBABWE</option>
+</select><img width='9' title='required input element' style='margin-left:3px;' src='fw/def/image/required.gif' height='13' border='0' align='absmiddle' vspace='0'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_postcode' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>Postcode:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='postcode' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_omsOrganisationId' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>OMS Organisation Identifier:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='omsOrganisationId' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_omsLocationId' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>OMS Location Identifier:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='omsLocationId' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_gmpcRefKey' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>EudraGMDP Site Reference Number:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='gmpcRefKey' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_ncaRefKey' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>NCA Reference Key:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='ncaRefKey' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_additionalDetailsOnUnitsInspected' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>Additional Details on Units Inspected:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='additionalDetailsOnUnitsInspected' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr id='tr_miaAuthNumber' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>MIA Number:</label></td><td nowrap colspan='10' class='fd'><input value='' style='width:100%' name='miaAuthNumber' type='text'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='container'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td align='left' class='fd' valign='top' colspan='12'><tr>
+					<td colspan='4' width="50%">&nbsp;&nbsp;&nbsp;Legal Basis Of Certificate</td>
+					<td colspan='1' width="20%"><b>Enable Scope Search:</b></td>
+					<td colspan='1' align="left" width="10%"><input type="checkbox" name="includeLegalBasisScopeSearch" value="on" onclick="toggleDiv('includeLegalBasisScopeSearchId','legalBasisScopeCheckId')" id="includeLegalBasisScopeSearchId" title="Enable Scope Search"></td>
+					<td width="20%">&nbsp;</td>
+				</tr>
+				<tr rowtype='container'>
+					<td align='left' class='fd' valign='top' colspan='6'>
+
+						<div id="legalBasisScopeCheckId" align="left"
+							style="display: none; position: relative; left: 100px;">
+							<table border=0>
+								<tr>
+									<td><input type="checkbox" name="gmpcH" value="on" title="Human / Art. 111(5) of Directive 2001/83/EC"></td>
+									<td>Human / Art. 111(5) of Directive 2001/83/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpcV" value="on" title="Veterinary / Art. 80(5) of Directive 2001/82/EC"></td>
+									<td>Veterinary / Art. 80(5) of Directive 2001/82/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpcVMWD" value="on" title="Veterinary / Art. 94(1) of Regulation (EU) 2019/6"></td>
+									<td>Veterinary / Art. 94(1) of Regulation (EU) 2019/6</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpcICT" value="on" title="Investigational Medicinal Product / Art. 63 of Regulation (EU) 536/2014"></td>
+									<td>Investigational Medicinal Product / Art. 63 of Regulation (EU) 536/2014</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpcI" value="on" title="Investigational Medicinal Product / Art. 15 of Directive 2001/20/EC"></td>
+									<td>Investigational Medicinal Product / Art. 15 of Directive 2001/20/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpncH" value="on" id="gmpncH_id" title="GMP Non-Compliance Human / Art. 111(7) of Directive 2001/83/EC"></td>
+									<td>GMP Non-Compliance Human / Art. 111(7) of Directive 2001/83/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpncV" value="on" id="gmpncV_id" title="GMP Non-Compliance Veterinary / Art. 80(7) of Directive 2001/82/EC"></td>
+									<td>GMP Non-Compliance Veterinary / Art. 80(7) of Directive 2001/82/EC</td>
+								</tr>
+								
+								<tr>
+									<td><input type="checkbox" name="gmpncVMWD" value="on" id="gmpncVMWD_id" title="GMP Non-Compliance Veterinary / Art. 94(2) of Regulation (EU) 2019/6"></td>
+									<td>GMP Non-Compliance Veterinary / Art. 94(2) of Regulation (EU) 2019/6</td>
+								</tr>
+							</table>
+						</div></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='container'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td align='left' class='fd' valign='top' colspan='12'><tr>
+					<td colspan='4' width="50%">&nbsp;&nbsp;&nbsp;Type of Inspection</td>
+					<td colspan='1' width="20%"><b>Enable Inspection Search:</b></td>
+					<td colspan='1' align="left" width="10%"><input type="checkbox" name="includeLegalBasisSearch" value="on" onclick="toggleDiv('includeLegalBasisSearchId','legalBasisCheckId')" id="includeLegalBasisSearchId" title="Enable Inspection Search"></td>
+					<td width="20%">&nbsp;</td>
+				</tr>
+				<tr rowtype='container'>
+					<td align='left' class='fd' valign='top' colspan='6'>
+
+						<div id="legalBasisCheckId" align="left"
+							style="display: none; position: relative; left: 100px;">
+							<table border=0>
+								<tr>
+									<td><b>National Inspection Program</b></td>
+									<td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_40_83" value="on" title="Art. 40 of Directive 2001/83/EC"></td>
+									<td>Art. 40 of Directive 2001/83/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_44_82" value="on" title="Art. 44 of Directive 2001/82/EC"></td>
+									<td>Art. 44 of Directive 2001/82/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_94_1_6" value="on" title="gmpc.art.directive.94_1.6@gmpc"></td>
+									<td>Art. 94(1) of Regulation (EU) 2019/6</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_13_20" value="on" title="Art. 13 of Directive 2001/20/EC"></td>
+									<td>Art. 13 of Directive 2001/20/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_88_6" value="on" title="gmpc.art.directive.88.6@gmpc"></td>
+									<td>Art. 88 of Regulation (EU) 2019/6</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_61_536" value="on" title="gmpc.art.directive.61.536@gmpc"></td>
+									<td>Art. 61 of Regulation (EU) No 536/2014</td>
+								</tr>
+								
+								<tr>
+									<td><b>Third Country Inspection Program</b></td>
+									<td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_8_2" value="on" title="Art. 8(2) of Regulation (EC) 726/2004"></td>
+									<td>Art. 8(2) of Regulation (EC) 726/2004</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_33_2" value="on" title="Art. 33(2) of Regulation 726/2004/EC"></td>
+									<td>Art. 33(2) of Regulation 726/2004/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_19_3" value="on" title="Art. 19(3) of Regulation 726/2004/EC"></td>
+									<td>Art. 19(3) of Regulation 726/2004/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_44_3" value="on" title="Art. 44(3) of Regulation 726/2004/EC"></td>
+									<td>Art. 44(3) of Regulation 726/2004/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_111_4" value="on" title="Art. 111(4) of Directive 2001/83/EC"></td>
+									<td>Art. 111(4) of Directive 2001/83/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_80_4" value="on" title="Art. 80(4) of Directive 2001/82/EC"></td>
+									<td>Art. 80(4) of Directive 2001/82/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_94_4" value="on" title="gmpc.art.directive.94_4.6@gmpc"></td>
+									<td>Art. 94(4) of Regulation (EU) 2019/6</td>
+								</tr>
+
+
+								<tr>
+									<td><b>Excipient Manufacturer</b></td>
+									<td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_ex_art_directive_111_1" value="on" title="Art. 111(1) of Directive 2001/83/EC"></td>
+									<td>Art. 111(1) of Directive 2001/83/EC</td>
+								</tr>
+
+
+								<tr>
+									<td><b>Active Substance Manufacturer</b></td>
+									<td>&nbsp;</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_111_1" value="on" title="Art. 111(1) of Directive 2001/83/EC"></td>
+									<td>Art. 111(1) of Directive 2001/83/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_80_1" value="on" title="Art. 80(1) of Directive 2001/82/EC"></td>
+									<td>Art. 80(1) of Directive 2001/82/EC</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_123_6" value="on" title="gmpc.art.directive.123.6@gmpc"></td>
+									<td>Art. 123(6) of Regulation (EU) 2019/6</td>
+								</tr>
+
+								<tr>
+									<td><b>Centralised Procedure for Manufacturers in the EEA</b></td>
+									<td>&nbsp;</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_8_2_726" value="on" title="Art. 8(2) of Regulation (EC) 726/2004"></td>
+									<td>Art. 8(2) of Regulation (EC) 726/2004</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_33_2_726" value="on" title="Art. 33(2) of Regulation (EC) 726/2004"></td>
+									<td>Art. 33(2) of Regulation (EC) 726/2004</td>
+								</tr>
+
+								<tr>
+									<td><b>Inspections in Third Countries for IMP</b></td>
+									<td>&nbsp;</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_15_4" value="on" title="Art. 15(4) of Directive 2001/20/EC"></td>
+									<td>Art. 15(4) of Directive 2001/20/EC</td>
+								</tr>
+								<tr>
+                                	<td><input type="checkbox" name="gmpc_art_directive_63_536" value="on" title="gmpc.art.directive.63.536@gmpc"></td>
+                                	<td>Art. 63 of Regulation (EU) 536/2014</td>
+                                </tr>
+								<!-- non compliance -->
+								<tr>
+									<td><b>Finished Product Program (Non Compliance)</b></td>
+									<td>&nbsp;</td>
+								</tr>
+
+								<tr>
+                                    <td><input type="checkbox" name="gmpc_art_directive_2017_1572" value="on" id="gmpc_art_directive_2017_1572_id" title="Directive (EU) 2017/1572"></td>
+                                    <td>Directive (EU) 2017/1572</td>
+                                </tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_412_1" value="on" id="gmpc_art_directive_412_1_id" title="Directive 91/412/EEC (Finished Products)"></td>
+									<td>Directive 91/412/EEC (Finished Products)</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_2017_1572_2" value="on" id="gmpc_art_directive_2017_1572_2_id" title="Directive (EU) 2017/1572"></td>
+									<td>Directive (EU) 2017/1572</td>
+								</tr>
+
+								<tr>
+									<td><b>Active Substance Manufacturer (Non Compliance)</b></td>
+									<td>&nbsp;</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_47_83" value="on" id="gmpc_art_directive_47_83_id" title="Article 47 of Directive 2001/83/EC (Active Substances)"></td>
+									<td>Article 47 of Directive 2001/83/EC (Active Substances)</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_art_directive_51_82" value="on" id="gmpc_art_directive_51_82_id" title="Article 51 of Directive 2001/82/EC (Active Substances)"></td>
+									<td>Article 51 of Directive 2001/82/EC (Active Substances)</td>
+								</tr>
+
+								<tr>
+                                    <td><input type="checkbox" name="gmpc_art_directive_93_2" value="on" id="gmpc_art_directive_93_2_id" title="Article 93(2) of Regulation (EU) 2019/6"></td>
+                                    <td>Article 93(2) of Regulation (EU) 2019/6</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="gmpc_art_directive_1569" value="on" id="gmpc_art_directive_1569_id" title="Commission Delegated Regulation (EU) 2017/1569"></td>
+                                    <td>Commission Delegated Regulation (EU) 2017/1569</td>
+                                </tr>
+
+								<tr>
+									<td><b>Other (Human)</b></td>
+									<td>&nbsp;</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" name="gmpc_distantAssessment" value="on" title="Distant Assesment"></td>
+									<td>Distant Assesment</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" name="gmpc_otherTOI" value="on" title="Other (Human)"></td>
+									<td>Other (Human)</td>
+								</tr>
+							</table>
+						</div></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='separator'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td colspan='12' background='fw/def/image/separator.gif'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='container'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td align='left' class='fd' valign='top' colspan='12'><tr>
+					<td colspan='4' width="50%">&nbsp;&nbsp;&nbsp;Operations</td>
+					<td colspan='1' width="20%"><b>Enable Operations Search:</b></td>
+					<td colspan='1' align="left" width="10%"><input type="checkbox" name="includeOperationSearch" value="on" onclick="toggleDiv('includeOperationSearchId','operationCheckId')" id="includeOperationSearchId" title="EnableOperationSearch"></td>
+					<td width="20%">&nbsp;</td>
+				</tr>
+				<tr rowtype='container'>
+					<td align='left' class='fd' valign='top' colspan='6'>
+
+						<div id="operationCheckId" align="left"
+							style="display: none; position: relative; left: 100px;">
+							<table border=0>
+								<tr>
+									<td><b> MANUFACTURING OPERATIONS
+									</b></td>
+								</tr>
+								<tr>
+									<td><select name="selectedManufacturingOperations" multiple="multiple" size="10" id="manuOpt"><option value="2">&nbsp;&nbsp;&nbsp;&nbsp;Sterile products [ 1.1 ]</option>
+<option value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aseptically prepared [ 1.1.1 ]</option>
+<option value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large volume liquids [ 1.1.1.1 ]</option>
+<option value="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lyophilisates [ 1.1.1.2 ]</option>
+<option value="26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semi-solids [ 1.1.1.3 ]</option>
+<option value="37">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Small volume liquids [ 1.1.1.4 ]</option>
+<option value="48">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solids and implants [ 1.1.1.5 ]</option>
+<option value="59">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other [ 1.1.1.6 ]</option>
+<option value="70">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terminally sterilised [ 1.1.2 ]</option>
+<option value="71">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large volume liquids [ 1.1.2.1 ]</option>
+<option value="82">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semi-solids [ 1.1.2.2 ]</option>
+<option value="93">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Small volume liquids [ 1.1.2.3 ]</option>
+<option value="104">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solids and implants [ 1.1.2.4 ]</option>
+<option value="115">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other [ 1.1.2.5 ]</option>
+<option value="127">&nbsp;&nbsp;&nbsp;&nbsp;Non-sterile products [ 1.2 ]</option>
+<option value="128">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Non-sterile products [ 1.2.1 ]</option>
+<option value="129">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capsules, hard shell [ 1.2.1.1 ]</option>
+<option value="140">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capsules, soft shell [ 1.2.1.2 ]</option>
+<option value="151">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chewing gums [ 1.2.1.3 ]</option>
+<option value="162">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Impregnated matrices [ 1.2.1.4 ]</option>
+<option value="173">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liquids for external use [ 1.2.1.5 ]</option>
+<option value="184">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liquids for internal use [ 1.2.1.6 ]</option>
+<option value="195">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medicinal gases [ 1.2.1.7 ]</option>
+<option value="206">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other solid dosage forms [ 1.2.1.8 ]</option>
+<option value="217">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pressurised preparations [ 1.2.1.9 ]</option>
+<option value="228">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Radionuclide generators [ 1.2.1.10 ]</option>
+<option value="239">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semi-solids [ 1.2.1.11 ]</option>
+<option value="250">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Suppositories [ 1.2.1.12 ]</option>
+<option value="261">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tablets [ 1.2.1.13 ]</option>
+<option value="272">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transdermal patches [ 1.2.1.14 ]</option>
+<option value="283">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Intraruminal devices [ 1.2.1.15 ]</option>
+<option value="294">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Veterinary premixes [ 1.2.1.16 ]</option>
+<option value="305">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other [ 1.2.1.17 ]</option>
+<option value="317">&nbsp;&nbsp;&nbsp;&nbsp;Biological medicinal products (list of product types) [ 1.3 ]</option>
+<option value="318">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biological medicinal products (list of product types) [ 1.3.1 ]</option>
+<option value="319">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blood products [ 1.3.1.1 ]</option>
+<option value="330">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Immunological products [ 1.3.1.2 ]</option>
+<option value="341">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cell therapy products [ 1.3.1.3 ]</option>
+<option value="352">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gene therapy products [ 1.3.1.4 ]</option>
+<option value="363">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biotechnology products [ 1.3.1.5 ]</option>
+<option value="374">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Human or animal extracted products [ 1.3.1.6 ]</option>
+<option value="591">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tissue engineered products [ 1.3.1.7 ]</option>
+<option value="404">&nbsp;&nbsp;&nbsp;&nbsp;Other products or manufacturing activity  [ 1.4 ]</option>
+<option value="405">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manufacture of [ 1.4.1 ]</option>
+<option value="406">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Herbal products [ 1.4.1.1 ]</option>
+<option value="417">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Homoeopathic products [ 1.4.1.2 ]</option>
+<option value="439">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other [ 1.4.1.3 ]</option>
+<option value="450">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sterilisation of active substance/ excipients/ finished product [ 1.4.2 ]</option>
+<option value="451">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filtration [ 1.4.2.1 ]</option>
+<option value="462">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dry heat [ 1.4.2.2 ]</option>
+<option value="473">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moist heat [ 1.4.2.3 ]</option>
+<option value="484">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chemical [ 1.4.2.4 ]</option>
+<option value="495">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gamma irradiation [ 1.4.2.5 ]</option>
+<option value="506">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Electron beam [ 1.4.2.6 ]</option>
+<option value="517">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other [ 1.4.3 ]</option>
+<option value="528">&nbsp;&nbsp;&nbsp;&nbsp;Packaging [ 1.5 ]</option>
+<option value="547">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Secondary packaging [ 1.5.2 ]</option>
+<option value="548">&nbsp;&nbsp;&nbsp;&nbsp;Quality control testing [ 1.6 ]</option>
+<option value="549">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microbiological: sterility [ 1.6.1 ]</option>
+<option value="550">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microbiological: non-sterility [ 1.6.2 ]</option>
+<option value="551">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chemical/Physical [ 1.6.3 ]</option>
+<option value="552">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biological [ 1.6.4 ]</option>
+<option value="385">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other [ 1.3.1.8 ]</option></select></td>
+								</tr>
+							</table>
+							<table border=0>
+								<tr>
+									<td><b> Batch Operations
+									</b></td>
+								</tr>
+								<tr>
+									<td><select name="selectedBatchOperations" multiple="multiple" size="10" id="batOpt"><option value="126">&nbsp;&nbsp;&nbsp;&nbsp;Sterile products [ 1.1.3 ]</option>
+<option value="316">&nbsp;&nbsp;&nbsp;&nbsp;Non-sterile products [ 1.2.2 ]</option>
+<option value="396">&nbsp;&nbsp;&nbsp;&nbsp;Biological medicinal products (list of product types) [ 1.3.2 ]</option>
+<option value="397">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blood products [ 1.3.2.1 ]</option>
+<option value="398">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Immunological products [ 1.3.2.2 ]</option>
+<option value="399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cell therapy products [ 1.3.2.3 ]</option>
+<option value="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gene therapy products [ 1.3.2.4 ]</option>
+<option value="401">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biotechnology products [ 1.3.2.5 ]</option>
+<option value="402">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Human or animal extracted products [ 1.3.2.6 ]</option>
+<option value="601">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tissue engineered products [ 1.3.2.7 ]</option>
+<option value="403">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other [ 1.3.2.8 ]</option></select></td>
+								</tr>
+							</table>
+
+							<table border=0>
+								<tr>
+									<td><b> Primary packaging Operations
+									</b></td>
+								</tr>
+								<tr>
+									<td><select name="selectedPPOperations" multiple="multiple" size="10" id="ppOpt"><option value="528">&nbsp;&nbsp;&nbsp;&nbsp;Packaging [ 1.5 ]</option>
+<option value="529">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primary Packaging [ 1.5.1 ]</option>
+<option value="530">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capsules, hard shell [ 1.5.1.1 ]</option>
+<option value="531">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capsules, soft shell [ 1.5.1.2 ]</option>
+<option value="532">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chewing gums [ 1.5.1.3 ]</option>
+<option value="533">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Impregnated matrices [ 1.5.1.4 ]</option>
+<option value="534">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liquids for external use [ 1.5.1.5 ]</option>
+<option value="535">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liquids for internal use [ 1.5.1.6 ]</option>
+<option value="536">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medicinal gases [ 1.5.1.7 ]</option>
+<option value="537">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other solid dosage forms [ 1.5.1.8 ]</option>
+<option value="538">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pressurised preparations [ 1.5.1.9 ]</option>
+<option value="539">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Radionuclide generators [ 1.5.1.10 ]</option>
+<option value="540">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semi-solids [ 1.5.1.11 ]</option>
+<option value="541">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Suppositories [ 1.5.1.12 ]</option>
+<option value="542">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tablets [ 1.5.1.13 ]</option>
+<option value="543">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transdermal patches [ 1.5.1.14 ]</option>
+<option value="544">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Intraruminal devices [ 1.5.1.15 ]</option>
+<option value="545">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Veterinary premixes [ 1.5.1.16 ]</option>
+<option value="546">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other non-sterile medicinal products [ 1.5.1.17 ]</option></select></td>
+								</tr>
+
+							</table>
+
+							<table border=0>
+								<tr>
+									<td><b> Importation Operations
+									</b></td>
+								</tr>
+								<tr>
+									<td><select name="selectedImportationOperations" multiple="multiple" size="10" id="impOpt"><option value="560">&nbsp;&nbsp;&nbsp;&nbsp;Sterile products [ 2.2.1 ]</option>
+<option value="561">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aseptically prepared [ 2.2.1.1 ]</option>
+<option value="562">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terminally sterilised [ 2.2.1.2 ]</option>
+<option value="563">&nbsp;&nbsp;&nbsp;&nbsp;Non-sterile products [ 2.2.2 ]</option>
+<option value="564">&nbsp;&nbsp;&nbsp;&nbsp;Biological medicinal products [ 2.2.3 ]</option>
+<option value="565">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blood products [ 2.2.3.1 ]</option>
+<option value="566">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Immunological products [ 2.2.3.2 ]</option>
+<option value="567">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cell therapy products [ 2.2.3.3 ]</option>
+<option value="568">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gene therapy products [ 2.2.3.4 ]</option>
+<option value="569">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biotechnology products [ 2.2.3.5 ]</option>
+<option value="570">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Human or animal extracted products [ 2.2.3.6 ]</option>
+<option value="602">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tissue engineered products [ 2.2.3.7 ]</option>
+<option value="554">&nbsp;&nbsp;&nbsp;&nbsp;Quality control testing of imported medicinal products [ 2.1 ]</option>
+<option value="555">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microbiological: sterility [ 2.1.1 ]</option>
+<option value="556">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microbiological: non-sterility [ 2.1.2 ]</option>
+<option value="557">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chemical/Physical [ 2.1.3 ]</option>
+<option value="558">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biological [ 2.1.4 ]</option>
+<option value="571">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other [ 2.2.3.8 ]</option>
+<option value="603">&nbsp;&nbsp;&nbsp;&nbsp;Other importation activities [ 2.3 ]</option>
+<option value="604">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Site of physical importation [ 2.3.1 ]</option>
+<option value="605">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Importation of intermediate which undergoes further processing [ 2.3.2 ]</option>
+<option value="606">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Biological active substance [ 2.3.3 ]</option>
+<option value="607">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other [ 2.3.4 ]</option></select></td>
+								</tr>
+
+							</table>
+
+							<table border=0>
+								<tr>
+									<td><input type="button" name="resetAll" value="Reset All" onclick="resetSelect()"></td>
+								</tr>
+
+							</table>
+						</div></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr><td colspan='14' class='section'>&#160;</td></tr><tr id='tr_includeNcr' rowtype='control'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>Include Non-Compliance Report:</label></td><td align='left' class='fd' colspan='10' nowrap><input onClick='toggleIncludeNcr(this.checked)' id='includeNcr_checkId' checked value='on' name='includeNcr' type='checkbox'></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr><tr rowtype='buttons'><td class='fls'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td><td class='fe'>&#160;</td><td class='fl'><label>&#160;</label></td><td colspan='10' class='fd'><table cellspacing='0' width='100%' class='fb' border='0' cellpadding='5'><tr><td width='100%'>&#160;</td><td align='right'><div id='btnSearchGMPC' onClick="document.getElementById('btnSearchGMPCHidden').value='clicked'; checkIt();CCUtility.submitEnclosingForm(this);"><input id='btnSearchGMPCHidden' name='btnSearchGMPC' type='HIDDEN'><table cellspacing='0' class='tbtn' border='0' cellpadding='0'><tr valign='middle'><td><img id='btnBgL' width='16' height='17' border='0' src='fw/def/image/buttons/btnTxtBgL1.gif'></td><td id='btnMiddle' align='middle' background='fw/def/image/buttons/btnTxtBgM1.gif' style='background-position: right;' nowrap><span id='btnSearchGMPCLabel' style='color:#000000' class='tbtn'>Search</span></td><td><img id='btnBgR' width='8' height='17' border='0' src='fw/def/image/buttons/btnTxtBgR1.gif'></td></tr></table></div></td></tr></table></td><td class='frs'><img width='1' height='1' border='0' src='fw/def/image/spacer.gif'></td></tr></table></td></tr></table></td></tr></tbody></table></span><!-- END: com.cc.framework.ui.painter.def.DefFormEditPainter -->
+
+
+
+		
+			<br>
+
+			
+<!-- BEGIN: com.cc.framework.ui.painter.def.DefListPainter [searchGMPCResultControlList] -->
+
+				
+				
+
+				
+
+				
+				
+
+				
+
+				
+				
+				
+                
+                
+                
+				
+				
+				
+				
+				
+
+				
+
+
+				
+
+				
+			<span id='lc_ctrl1531072421'><table width='100%' style='font-size:50' border='0' class='lc' id='ctrl1531072421' cellspacing='0' cellpadding='0'><thead><tr><td><table cellspacing='0' class='lch' border='0' cellpadding='0'><tr><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/l.gif'></td><td width='100%'><table cellpadding='0' width='100%' cellspacing='3'><tr><td nowrap class='c'>GMPC Search Results</td><td><img width='6' height='15' border='0' src='fw/def/image/bullet.gif'></td><td nowrap class='d'>1 to 10 of 18782</td><td width='100%'>&#160;</td><td><img width='15' height='15' border='0' src='fw/def/image/buttons/btnFirst2.gif'></td><td><img width='15' height='15' border='0' src='fw/def/image/buttons/btnPrev2.gif'></td><td><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Page&param=1' title='Goto next page'><img width='15' src='fw/def/image/buttons/btnNext1.gif' height='15' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Page&param=-1' title='Goto last page'><img width='15' src='fw/def/image/buttons/btnLast1.gif' height='15' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=ExportList' title='Export list as Excel'><img width='15' src='fw/def/image/buttons/btnExport1.gif' height='15' border='0' align='absmiddle' id='btn' vspace='0'></a></td></tr></table></td><td valign='top'><img width='10' height='17' border='0' src='fw/def/image/corners/r.gif'></td></tr></table></td></tr></thead><tbody><tr><td><table cellspacing='0' width='100%' class='lcb' cellpadding='0'><tr><td><table cellspacing='1' width='100%' class='ibody' border='0' cellpadding='0'><tr class='header'><td width='11%'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Sort&param=certificateNumber&param=asc'>Certificate Number<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'>EudraGMDP Document Reference Number</td><td width='8%'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Sort&param=gmpCategory&param=asc'>Document Type<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='9%'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Sort&param=miaAuthNum&param=asc'>MIA Number<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='12%'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Sort&param=omsOrganisationId&param=asc'>OMS Organisation Identifier<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='12%'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Sort&param=omsLocationId&param=asc'>OMS Location Identifier<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='12%'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Sort&param=siteNameHtmlView&param=asc'>Site Name<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='25%'>Site Address</td><td width='10%'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Sort&param=siteCity&param=asc'>City<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Sort&param=sitePostCode&param=asc'>Postcode<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortable1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td><td width='10%'>Country</td><td width='12%'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Sort&param=inspectionDate&param=asc'>Inspection End Date<img width='11' style='margin-left:3px;' src='fw/def/image/buttons/btnSortDown1.gif' height='13' border='0' align='absmiddle' id='btn' vspace='0'></a></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187649' style='font-size:12'><span>NL/H 26/2063901</span></a></td><td class='cl'><div style='font-size:12'>187649</div></td><td class='cl'><div style='font-size:12'>GMPC</div></td><td class='cl'><div style='font-size:12'>4935 F</div></td><td class='cl'><div style='font-size:12'>ORG-100004950</div></td><td class='cl'><div style='font-size:12'>LOC-100049865</div></td><td class='cl'><div style='font-size:12'><div>Centrafarm Services B.V. </div></div></td><td class='cl'><div><div>Van De Reijtstraat 31 E </div></div></td><td class='cl'><div style='font-size:12'>Breda</div></td><td class='cl'><div style='font-size:12'>4814 NE</div></td><td class='cl'><div style='font-size:12'>Netherlands</div></td><td class='cl'><div style='font-size:12'>2026-09-16</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187547' style='font-size:12'><span>NNGYK/63504-9/2026</span></a></td><td class='cl'><div style='font-size:12'>187547</div></td><td class='cl'><div style='font-size:12'>GMPC</div></td><td class='cl'><div style='font-size:12'>HU-M-COPU</div></td><td class='cl'><div style='font-size:12'>ORG-100032355</div></td><td class='cl'><div style='font-size:12'>LOC-100053688</div></td><td class='cl'><div style='font-size:12'><div>Medicopus Nonprofit Kft. </div></div></td><td class='cl'><div><div>Guba Sandor Utca 40 </div></div></td><td class='cl'><div style='font-size:12'>Kaposvar</div></td><td class='cl'><div style='font-size:12'>7400</div></td><td class='cl'><div style='font-size:12'>Hungary</div></td><td class='cl'><div style='font-size:12'>2026-09-03</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187383' style='font-size:12'><span>DE_NI_02_GMP_2026_0033</span></a></td><td class='cl'><div style='font-size:12'>187383</div></td><td class='cl'><div style='font-size:12'>GMPC</div></td><td class='cl'><div style='font-size:12'>DE_NI_02_MIA_2020_0046</div></td><td class='cl'><div style='font-size:12'>ORG-100000173</div></td><td class='cl'><div style='font-size:12'>LOC-100006971</div></td><td class='cl'><div style='font-size:12'><div>Laves-Arzneimittel GmbH </div></div></td><td class='cl'><div><div>Barbarastrasse 14, Empelde </div></div></td><td class='cl'><div style='font-size:12'>Ronnenberg</div></td><td class='cl'><div style='font-size:12'>30952</div></td><td class='cl'><div style='font-size:12'>Germany</div></td><td class='cl'><div style='font-size:12'>2026-09-01</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187402' style='font-size:12'><span>DE_BE_01_GMP_2026_0044</span></a></td><td class='cl'><div style='font-size:12'>187402</div></td><td class='cl'><div style='font-size:12'>GMPC</div></td><td class='cl'><div style='font-size:12'>DE_BE_01_MIA_2026_0026</div></td><td class='cl'><div style='font-size:12'>ORG-100033385</div></td><td class='cl'><div style='font-size:12'>LOC-100052195</div></td><td class='cl'><div style='font-size:12'><div>ProBioGen AG </div></div></td><td class='cl'><div><div>Herbert-Bayer-Strasse 8, Weissensee </div></div></td><td class='cl'><div style='font-size:12'>Berlin</div></td><td class='cl'><div style='font-size:12'>13086</div></td><td class='cl'><div style='font-size:12'>Germany</div></td><td class='cl'><div style='font-size:12'>2026-08-27</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187252' style='font-size:12'><span>DE_HE_01_GMP_2026_0163</span></a></td><td class='cl'><div style='font-size:12'>187252</div></td><td class='cl'><div style='font-size:12'>GMPC</div></td><td class='cl'><div style='font-size:12'>&#160;</div></td><td class='cl'><div style='font-size:12'>ORG-100038851</div></td><td class='cl'><div style='font-size:12'>LOC-100061222</div></td><td class='cl'><div style='font-size:12'><div>CSL Plasma Inc. </div></div></td><td class='cl'><div><div>3221 West Blue Ridge Drive </div></div></td><td class='cl'><div style='font-size:12'>Greenville</div></td><td class='cl'><div style='font-size:12'>29611-3905</div></td><td class='cl'><div style='font-size:12'>United States</div></td><td class='cl'><div style='font-size:12'>2026-08-26</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187118' style='font-size:12'><span>DE_HE_01_GMP_2026_0088</span></a></td><td class='cl'><div style='font-size:12'>187118</div></td><td class='cl'><div style='font-size:12'>GMPDA</div></td><td class='cl'><div style='font-size:12'>DE_HE_01_MIA_2026_0045</div></td><td class='cl'><div style='font-size:12'>ORG-100041052</div></td><td class='cl'><div style='font-size:12'>LOC-100071825</div></td><td class='cl'><div style='font-size:12'><div>Merz Therapeutics GmbH </div></div></td><td class='cl'><div><div>Alfred-Wegener-Strasse 2, Niederursel </div></div></td><td class='cl'><div style='font-size:12'>Frankfurt Am Main</div></td><td class='cl'><div style='font-size:12'>60438</div></td><td class='cl'><div style='font-size:12'>Germany</div></td><td class='cl'><div style='font-size:12'>2026-08-20</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187331' style='font-size:12'><span>NL/H 26/2060973DPv1</span></a></td><td class='cl'><div style='font-size:12'>187331</div></td><td class='cl'><div style='font-size:12'>GMPC</div></td><td class='cl'><div style='font-size:12'>&#160;</div></td><td class='cl'><div style='font-size:12'>ORG-100033460</div></td><td class='cl'><div style='font-size:12'>LOC-100052353</div></td><td class='cl'><div style='font-size:12'><div>Shanghai Henlius Biopharmaceutical Co. Ltd. </div></div></td><td class='cl'><div><div>Building D, 1289 Yishan Road </div></div></td><td class='cl'><div style='font-size:12'>Shanghai</div></td><td class='cl'><div style='font-size:12'>200233</div></td><td class='cl'><div style='font-size:12'>China</div></td><td class='cl'><div style='font-size:12'>2026-08-19</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187332' style='font-size:12'><span>NL/H 26/2060973DSv1</span></a></td><td class='cl'><div style='font-size:12'>187332</div></td><td class='cl'><div style='font-size:12'>GMPC</div></td><td class='cl'><div style='font-size:12'>&#160;</div></td><td class='cl'><div style='font-size:12'>ORG-100033460</div></td><td class='cl'><div style='font-size:12'>LOC-100052353</div></td><td class='cl'><div style='font-size:12'><div>Shanghai Henlius Biopharmaceutical Co. Ltd. </div></div></td><td class='cl'><div><div>Building D, 1289 Yishan Road </div></div></td><td class='cl'><div style='font-size:12'>Shanghai</div></td><td class='cl'><div style='font-size:12'>200233</div></td><td class='cl'><div style='font-size:12'>China</div></td><td class='cl'><div style='font-size:12'>2026-08-19</div></td></tr><tr onMouseOver='high(this);' class='even' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187253' style='font-size:12'><span>DE_SN_01_GMP_2026_0047</span></a></td><td class='cl'><div style='font-size:12'>187253</div></td><td class='cl'><div style='font-size:12'>GMPC</div></td><td class='cl'><div style='font-size:12'>DE_SN_01_MIA_2024_0039</div></td><td class='cl'><div style='font-size:12'>ORG-100022333</div></td><td class='cl'><div style='font-size:12'>LOC-100044974</div></td><td class='cl'><div style='font-size:12'><div>DRK-Blutspendedienst Nord Ost gGmbH </div></div></td><td class='cl'><div><div>Roentgenstrasse 2a, Reusa </div></div></td><td class='cl'><div style='font-size:12'>Plauen</div></td><td class='cl'><div style='font-size:12'>08529</div></td><td class='cl'><div style='font-size:12'>Germany</div></td><td class='cl'><div style='font-size:12'>2026-08-13</div></td></tr><tr onMouseOver='high(this);' class='odd' onMouseOut='low(this);'><td class='cl'><a href='/inspections/gmpc/searchGMPCompliance.do?ctrl=searchGMPCResultControlList&action=Drilldown&param=187327' style='font-size:12'><span>FIMEA/2026/003195 IMP</span></a></td><td class='cl'><div style='font-size:12'>187327</div></td><td class='cl'><div style='font-size:12'>GMPC</div></td><td class='cl'><div style='font-size:12'>FIMEA/2026/001327</div></td><td class='cl'><div style='font-size:12'>ORG-100000265</div></td><td class='cl'><div style='font-size:12'>LOC-100009560</div></td><td class='cl'><div style='font-size:12'><div>Orion Corporation </div> <br/> <b> <div>Alternative Name: </b> </div> <div>Orion Oyj</div></div></td><td class='cl'><div><div>Joensuunkatu 7 </div></div></td><td class='cl'><div style='font-size:12'>Salo</div></td><td class='cl'><div style='font-size:12'>24100</div></td><td class='cl'><div style='font-size:12'>Finland</div></td><td class='cl'><div style='font-size:12'>2026-08-12</div></td></tr></table></td></tr></table></td></tr></tbody></table><script type='text/javascript' language='JavaScript'>
+<!--
+var lc_ctrl1531072421 = new ListControl('ctrl1531072421');
+// -->
+</script></span><!-- END: com.cc.framework.ui.painter.def.DefListPainter -->
+
+		
+
+		<input type="hidden" name="isReset" id="isReset_Id" value="false" />
+	</form>
+<script type="text/javascript" language="JavaScript">
+  <!--
+  var focusControl = document.forms["GMPCSearchForm"].elements["certificateNumber"];
+
+  if (focusControl.type != "hidden" && !focusControl.disabled) {
+     focusControl.focus();
+  }
+  // -->
+</script>
+
+</body>
+</html>
+                
+              </td>
+              <td width="40">&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+        <td width="40px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- 5px while line -->
+      <tr class="border_l_n_r">
+        <td width="40px" height="5px" nowrap="nowrap"/>
+        <td height="5px" class="border_l_n_r">&nbsp;</td>
+        <td width="40px" height="5px" nowrap="nowrap" class="border_l_n_r"/>
+      </tr>
+      <!-- Content  -->
+      <tr>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td height="20px" class="border_l_n_r">&nbsp;</td>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- bottom curves  -->
+      <tr>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="left">
+                <img src="image/common/ep_b_l_corner2.jpg" width="22" align="absbottom"/>
+              </td>
+              <td width="100%" align="center" class="border_bottom">&nbsp;</td>
+              <td align="right">
+                <img src="image/common/EP_b_r_corner2.jpg" width="23" align="absbottom"/>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- trade mark  -->
+      <tr valign="bottom">
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td valign="bottom" height="20px" align="center">
+          <table>
+            <tr vAlign="bottom">
+              <td vAlign="bottom">
+                
+
+<table>
+	<tr vAlign=bottom>
+		<td vAlign=bottom><font size="1" face="arial" color="#333333"><script>
+function openInNewWindowCA()
+ {
+	   window.open('viewCompetentAuthorityAddresses.do','print','scrollbars=yes,status=no,titlebar=no,resizable=yes,menubar=no');
+	   }
+</script>
+The EudraGMDP database is maintained and operated by the EMA. Access to the general public is granted in order to enhance availability of information related to the EMA mandate.  The content of the database is provided by the National Competent Authorities (NCA) of the EEA. For this reason, the EMA accepts no responsibility or liability whatsoever (including but not limited to any direct or consequential loss or damage it might occur to you and/or any other third party) arising out of or in connection with the information on this database.  Any questions about the content should be addressed to the relevant NCA. Please <a href="javascript:openInNewWindowCA()" style="text-decoration: underline;padding-left:0px;padding-right:0px">click here</a> to get list of NCA's.
+</font></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: bottom; font-family: Arial,sans-serif; font-size: x-small; color: #333333; padding-bottom: 0.4rem; font-weight: bolder;">
+			<p>For the UK, as from 1.1.2021, EU Law applies only to the territory of Northern Ireland (NI) to the extent foreseen in the Protocol on Ireland/NI.</p>
+<p>Documents issued by UK authorities up to and including 31 December 2020 remain available for consultation in EudraGMDP. However, they are no longer included or updated from 1 January 2021, with the exception of the documents pertaining to sites located in Northern Ireland.</p>
+		</td>
+	</tr>
+	<tr vAlign=bottom>
+		<td vAlign=bottom align="center"><font size="1" face="arial" color="#333333">[EMA &copy; 2014. EudraGMDP <!DOCTYPE html>
+6.5.4.8 build 2026/01/16 09:45] </td>
+	</tr>
+</table>                
+              </td>
+              <td vAlign="bottom"> 
+               <iframe name="beansAlive" src="keepBeansAlive.do" width="0" height="0" frameborder="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+      <!-- bottom margin -->
+      <tr vAlign="bottom">
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+        <td valign="bottom" height="20px">&nbsp;</td>
+        <td valign="bottom" width="40px" height="20px" nowrap="nowrap">&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
