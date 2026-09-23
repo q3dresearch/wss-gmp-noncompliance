@@ -13,6 +13,13 @@ pages -- and 8 yield exactly ten rows each on an older layout. Those 8 are
 reported separately rather than folded in, because nothing in the page
 confirms them.
 
+FIVE HEADER LAYOUTS, AND ONE OF THEM HAD A STATUS COLUMN. The eight mementos
+from 2014 carry `Status` between `Issue Date` and `Last Update Date` -- and it
+is EMPTY on all 62 rows they hold. By 2015-03-23 the column is gone. So the
+register once modelled a status, never populated it, and removed it, which is a
+stronger version of "there is no status column" rather than a contradiction of
+it. Columns are therefore resolved BY NAME here, never by position.
+
 THE KEY IS NOT THE REPORT NUMBER. One report can name several sites, so a
 report number appears more than once in a single capture; that is why the
 live register carries 79 rows under 71 numbers. This script counts DISTINCT
@@ -34,17 +41,24 @@ def parse(page):
     m = ITEMS.search(page)
     stated = int(m.group(1)) if m else None
     rows = [[_text(c[1]) for c in CELL.findall(r)] for r in ROW.findall(page)]
-    idx = width = None
+    idx = width = site = None
     out = []
     for cells in rows:
         if idx is None:
             for i, c in enumerate(cells):
                 if c.lower().startswith("report number"):
                     idx, width = i, len(cells)
+                    # SITE NAME BY HEADER, NEVER BY POSITION. There are FIVE header
+                    # layouts across the 139 mementos, and in 104 of them the column
+                    # after Report Number is `EudraGMDP Document Reference Number`,
+                    # not `Site Name`. Taking idx+1 filled a third of this file with
+                    # document references where company names belong.
+                    site = next((j for j, h in enumerate(cells)
+                                 if h.strip().lower() == "site name"), None)
                     break
             continue
         if len(cells) == width and cells[idx]:
-            out.append((cells[idx], cells[idx + 1] if idx + 1 < width else ""))
+            out.append((cells[idx], cells[site] if site is not None else ""))
     return out, stated
 
 

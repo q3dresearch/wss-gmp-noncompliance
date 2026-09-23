@@ -70,6 +70,18 @@ notes: >-
   count, it is 152 ever seen and 117 absent -- reported separately because
   nothing in those pages confirms them.
 
+  IT ONCE HAD A STATUS COLUMN AND NEVER USED IT. Five distinct header layouts
+  appear across the 139 mementos, and the eight from 2014 carry `Status`
+  between `Issue Date` and `Last Update Date` -- EMPTY on all 62 rows they
+  hold. By 2015-03-23 the column is gone. So the register modelled a status,
+  never populated it, and removed it, which is a stronger version of "there is
+  no status column" than the original claim rather than a contradiction of it.
+  Columns are now resolved BY NAME in examples/wayback_report_numbers.py,
+  never by position: in 104 of the 139 mementos the column after Report Number
+  is `EudraGMDP Document Reference Number` and not `Site Name`, so taking
+  idx+1 filled a third of the ever-seen file with document references where
+  company names belong.
+
   UNIQUE KEY IS (Report Number, EudraGMDP Document Reference Number). Report
   Number alone is NOT unique -- 79 rows carry 71 report numbers because one
   report can name several sites. Diffing on it alone manufactures six permanent
