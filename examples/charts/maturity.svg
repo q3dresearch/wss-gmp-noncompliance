@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="513" viewBox="0 0 880 513" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'><rect width="880" height="513" fill="#fcfcfb"/>
+<text x="28.0" y="40.0" font-size="19" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">1 of 4 questions are answered now; 2 wait on the capture; 1 are not on a clock at all.</text>
+<text x="28.0" y="60.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Each question placed where the capture makes it answerable. Cadence is monthly; first capture 2026-09-22; 1 distinct capture day so far.</text>
+<text x="28.0" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">FOR</text>
+<text x="28.0" y="103.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Someone deciding whether to use this repo now</text>
+<text x="28.0" y="116.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">or wait for it</text>
+<text x="302.7" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">DECIDE</text>
+<text x="302.7" y="103.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Whether the question they came with is</text>
+<text x="302.7" y="116.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">answerable today, later, or not by waiting</text>
+<text x="577.3" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">WRONG IF</text>
+<text x="577.3" y="103.0" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">A question moves earlier than its mark</text>
+<text x="577.3" y="116.5" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">without new captures — then the wait was</text>
+<text x="577.3" y="130.0" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">never about data and the plan is wrong</text>
+<line x1="28" y1="139.5" x2="852" y2="139.5" stroke="#e3e2db"/>
+<line x1="366.0" y1="175.5" x2="366.0" y2="309.5" stroke="#f0efe9"/>
+<text x="366.0" y="323.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">0</text>
+<line x1="458.5" y1="175.5" x2="458.5" y2="309.5" stroke="#f0efe9"/>
+<text x="458.5" y="323.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">1</text>
+<line x1="550.9" y1="175.5" x2="550.9" y2="309.5" stroke="#f0efe9"/>
+<text x="550.9" y="323.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">2</text>
+<line x1="643.4" y1="175.5" x2="643.4" y2="309.5" stroke="#f0efe9"/>
+<text x="643.4" y="323.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">3</text>
+<line x1="735.8" y1="175.5" x2="735.8" y2="309.5" stroke="#f0efe9"/>
+<text x="735.8" y="323.5" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">4</text>
+<text x="764.0" y="323.5" font-size="9" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">months from first capture</text>
+<line x1="366" y1="305.5" x2="758" y2="305.5" stroke="#e3e2db"/>
+<line x1="782.0" y1="169.5" x2="782.0" y2="309.5" stroke="#e3e2db" stroke-dasharray="3 3"/>
+<text x="792.0" y="163.5" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">NO DATE</text>
+<text x="28.0" y="202.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">Q1</text>
+<text x="54.0" y="202.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Can a non-compliance statement be marked resolved?</text>
+<circle cx="366.0" cy="198.5" r="5.5" fill="#2f6f5e" stroke="#fcfcfb" stroke-width="1.6"/>
+<text x="28.0" y="232.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">Q2</text>
+<text x="54.0" y="232.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">So is a resolved statement edited in place, or …</text>
+<line x1="28" y1="213.5" x2="758" y2="213.5" stroke="#f0efe9"/>
+<line x1="366.0" y1="228.5" x2="458.5" y2="228.5" stroke="#aca89a" stroke-width="2"/>
+<circle cx="458.5" cy="228.5" r="5.5" fill="#c08a3e" stroke="#fcfcfb" stroke-width="1.6"/>
+<text x="28.0" y="262.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">Q3</text>
+<text x="54.0" y="262.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">How many statements are live, and against whom?</text>
+<line x1="28" y1="243.5" x2="758" y2="243.5" stroke="#f0efe9"/>
+<line x1="366.0" y1="258.5" x2="458.5" y2="258.5" stroke="#aca89a" stroke-width="2"/>
+<circle cx="458.5" cy="258.5" r="5.5" fill="#c08a3e" stroke="#fcfcfb" stroke-width="1.6"/>
+<text x="28.0" y="292.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">Q4</text>
+<text x="54.0" y="292.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Does a statement predict a later withdrawal or …</text>
+<line x1="28" y1="273.5" x2="758" y2="273.5" stroke="#f0efe9"/>
+<circle cx="812.0" cy="288.5" r="5.5" fill="none" stroke="#8a8880" stroke-width="2"/>
+<circle cx="34.0" cy="343.5" r="5.5" fill='#2f6f5e'/>
+<text x="46.0" y="347.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">answered from what is already</text>
+<text x="46.0" y="359.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">captured</text>
+<circle cx="320.0" cy="343.5" r="5.5" fill='#c08a3e'/>
+<text x="332.0" y="347.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">answerable once the capture</text>
+<text x="332.0" y="359.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">reaches that month</text>
+<circle cx="606.0" cy="343.5" r="5.5" fill='none' stroke='#8a8880' stroke-width='2'/>
+<text x="618.0" y="347.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">not on a clock — needs a method,</text>
+<text x="618.0" y="359.5" font-size="9.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">not more captures</text>
+<text x="28.0" y="381.5" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="12.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">1 of 4 questions will not be answered by waiting.</text>
+<text x="28.0" y="381.5" fill="#0b0b0b" font-size="12.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">1 of 4 questions will not be answered by waiting.</text>
+<text x="28.0" y="400.5" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">1 are answered from captures already held and 2 need the series to reach a stated length. The other 1 are open for a different</text>
+<text x="28.0" y="413.5" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">reason — no method, or no field in the source that could carry the answer. Waiting does not move them, so they are drawn off</text>
+<text x="28.0" y="426.5" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">the axis rather than at the end of it.</text>
+<line x1="28" y1="453.0" x2="852" y2="453.0" stroke="#e3e2db"/>
+<text x="28.0" y="469.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Read from this repo, not typed: questions and their status from the README table, cadence from registry/, first capture from</text>
+<text x="28.0" y="482.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">manifest/. A month is 30.44 days. THIS PLATE MEASURES NOTHING ABOUT THE WORLD — it is the capture plan drawn as a plan, and it is</text>
+<text x="28.0" y="495.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">wrong the moment the table says something the capture does not deliver.</text>
+</svg>

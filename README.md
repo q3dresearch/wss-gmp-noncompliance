@@ -52,6 +52,21 @@ phantom revisions.
 `toDate=<today>` returns the whole register, but narrow ranges return 0. Do not
 use it to partition captures until someone explains it.
 
+## Questions this exists to answer
+
+![1 of 4 questions are answered now; 2 wait on the capture; 1 are not on a clock at all.](examples/charts/maturity.svg)
+
+**1 of these 4 are answered from captures already held.** 2 become answerable only as the series lengthens — the plate shows when. The remaining 1 are not on a clock: they need a method, or a field this source does not publish, and waiting produces neither.
+
+
+| # | question | status |
+| --- | --- | --- |
+| Q1 | Can a non-compliance statement be marked resolved? | **answered — no.** The register carries eleven columns and not one is a status. *No figure: this is an absent column, not a distribution* |
+| Q2 | So is a resolved statement edited in place, or deleted? | needs 2+ captures. **The reason for capturing, and deliberately flagged UNPROVEN** — the baseline exists (2026-09-22) and only the second capture answers it |
+| Q3 | How many statements are live, and against whom? | needs a figure — the baseline is captured, nothing draws it yet |
+| Q4 | Does a statement predict a later withdrawal or recall? | open — needs a join to the EMA recall register, not more captures |
+
+
 ## Licence
 
 Code: MIT ([LICENSE](LICENSE)). **The data is not CC-BY-4.0 and carries no
