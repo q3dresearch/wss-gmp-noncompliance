@@ -96,6 +96,14 @@ def open_svg(width, height, title, *, subtitle=None):
          f'<rect width="{width}" height="{height}" fill="{SURFACE}"/>',
          txt(28, 40, title, size=19, fill=INK, weight="600")]
     if subtitle:
+        # open_svg does not wrap, so a long subtitle runs silently off the canvas
+        # -- it happened twice and neither plateaudit nor determinism can see it,
+        # because the text IS in the file, just past the right edge. At size 12 the
+        # usable width is (width - 56) and the face averages about 5.8px per glyph.
+        cap = int((width - 56) / 5.8)
+        assert len(subtitle) <= cap, (
+            f"subtitle is {len(subtitle)} chars, {cap} fit at width {width} -- shorten it "
+            f"or move the detail into the frame or the footnote")
         s.append(txt(28, 60, subtitle, size=12, fill=INK2))
     return s
 
